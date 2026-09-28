@@ -400,3 +400,14 @@ main>section+section{border-top:1px dashed var(--riga)}
 .wa svg{width:27px;height:27px}
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* ---------- angoli smussati su tutte le foto ---------- */
+.stampa{border-radius:10px}
+.stampa img{border-radius:6px}
+.altro .stampa,.tavolo .stampa{border-radius:8px}
+.altro .stampa img,.tavolo .stampa img{border-radius:5px}
+.scheda{border-radius:10px;overflow:hidden}
+.scheda .foto img{border-radius:6px}
+.clip .cornice{border-radius:10px;overflow:hidden}
+.visore .scena img{border-radius:10px}
+.marca img{border-radius:50%}
