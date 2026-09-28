@@ -1,6 +1,6 @@
 # Apicoltura Di Giuseppe Gabriele
 
-Sito di Di. Di. P di Di Giuseppe Gabriele, Via Case Cichetti, 64024 Notaresco (TE).
+Sito di Di. Di. P di Di Giuseppe Gabriele, Via Case Cicchetti, 64024 Notaresco (TE).
 
 Sito statico pubblicato con GitHub Pages, stessa impostazione di magrinigelati.it: una pagina unica (`index.html`), `privacy.html`, font ospitati in `fonts/`.
 
