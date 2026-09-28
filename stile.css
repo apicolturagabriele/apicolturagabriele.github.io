@@ -80,7 +80,7 @@ h3{font-size:1.5rem}
 /* ---------- impaginazione ---------- */
 .foglio{max-width:var(--largo);margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
 main>section{padding-block:clamp(48px,7vw,88px)}
-main>section:nth-of-type(even){background:var(--carta-2)}
+main>section.alt{background:var(--carta-2)}
 
 /* ---------- testata ---------- */
 .testata{background:var(--carta);border-bottom:1px solid var(--riga);position:sticky;top:env(safe-area-inset-top,0px);z-index:50}
@@ -170,7 +170,7 @@ main>section:nth-of-type(even){background:var(--carta-2)}
 
 .appunti{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .appunti div{background:var(--bianco);border-radius:var(--r);padding:22px 24px}
-main>section:nth-of-type(odd) .appunti div{background:var(--carta-2)}
+
 .appunti b{display:block;font:600 1.35rem/1.2 var(--f-titoli);margin-bottom:8px}
 .appunti p{color:var(--matita);font-size:1rem}
 @media (max-width:760px){.appunti{grid-template-columns:1fr}}
@@ -315,7 +315,7 @@ main>section:nth-of-type(odd) .appunti div{background:var(--carta-2)}
 /* ---------- adotta un'arnia ---------- */
 .passi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:p}
 .passi li{counter-increment:p;display:flex;flex-direction:column;gap:6px;background:var(--bianco);border-radius:var(--r);padding:22px 24px}
-main>section:nth-of-type(even) .passi li{background:var(--bianco)}
+
 .passi li::before{content:counter(p);width:36px;height:36px;border-radius:50%;background:var(--miele-vivo);color:#2A2008;display:grid;place-items:center;font:600 1.2rem/1 var(--f-titoli);margin-bottom:6px}
 .passi p{color:var(--matita);font-size:.97rem}
 @media (max-width:760px){.passi{grid-template-columns:1fr}}
@@ -394,7 +394,7 @@ main>section:nth-of-type(even) .passi li{background:var(--bianco)}
 @media (max-width:520px){.marca b{font-size:1.05rem}}
 
 /* ---------- testata che accompagna lo scorrimento ---------- */
-html{scroll-padding-top:calc(var(--h-testata,76px) + 64px)}
+html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 .testata{transition:box-shadow .2s}
 .testata .riga-marca{transition:min-height .2s}
 .testata.scrollato{box-shadow:0 6px 18px -12px rgba(46,39,32,.35)}
@@ -412,3 +412,8 @@ html{scroll-padding-top:calc(var(--h-testata,76px) + 64px)}
 .indice a:hover{color:var(--inchiostro);background:var(--carta-2)}
 .indice a.attivo{background:var(--inchiostro);color:var(--carta)}
 @media (max-width:700px){.indice span{display:none}.indice .foglio{min-height:48px}.indice a{font-size:.88rem;padding:6px 13px}}
+
+/* pagina unica: le sezioni di approfondimento restano legate a quella che le precede */
+#calendario,#servizi,#video,#pacchetti{padding-top:0!important}
+.titolo+.testo{margin-top:0}
+@media (min-width:1081px){.marca{flex:none}}

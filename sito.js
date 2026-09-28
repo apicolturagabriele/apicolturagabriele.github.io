@@ -44,24 +44,25 @@ var WA_NUM = '393420000730';
   suScroll(); misura();
   if (mb) mb.addEventListener('click', function(){ setTimeout(misura, 0); });
 
-  var indice = document.querySelector('.indice');
-  if (indice && 'IntersectionObserver' in window) {
-    var voci = indice.querySelector('.voci'), link = indice.querySelectorAll('a'), mappa = {};
-    link.forEach(function(a){ var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) mappa[t.id] = a; });
-    var visibili = {};
-    function attiva(){
-      var ids = Object.keys(mappa), scelto = null;
-      ids.forEach(function(id){ if (visibili[id]) scelto = id; });
-      if (!scelto) return;
-      link.forEach(function(a){ a.classList.toggle('attivo', a === mappa[scelto]); if (a === mappa[scelto]) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
-      var a = mappa[scelto], x = a.offsetLeft - (voci.clientWidth - a.offsetWidth) / 2;
-      voci.scrollTo({ left: x, behavior: reduce ? 'auto' : 'smooth' });
-    }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ visibili[e.target.id] = e.isIntersecting; });
-      attiva();
-    }, { rootMargin: '-140px 0px -55% 0px' });
-    Object.keys(mappa).forEach(function(id){ io.observe(document.getElementById(id)); });
+  /* il menu evidenzia la sezione in cui ti trovi */
+  var voci = ling ? Array.prototype.filter.call(ling.querySelectorAll('a'), function(a){ return a.getAttribute('href').charAt(0) === '#'; }) : [];
+  var bersagli = voci.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  function evidenzia(){
+    var limite = (testata ? testata.offsetHeight : 0) + 90, scelto = -1;
+    bersagli.forEach(function(t, i){ if (t && t.getBoundingClientRect().top <= limite) scelto = i; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) scelto = bersagli.length - 1;
+    voci.forEach(function(a, i){ if (i === scelto) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+  }
+  if (voci.length) {
+    window.addEventListener('scroll', evidenzia, { passive:true });
+    evidenzia();
+    voci.forEach(function(a, i){ a.addEventListener('click', function(e){
+      e.preventDefault();
+      ling.classList.remove('aperto'); mb.setAttribute('aria-expanded','false'); mb.setAttribute('aria-label','Apri il menu');
+      misura();
+      var t = bersagli[i]; if (!t) return;
+      requestAnimationFrame(function(){ t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); history.replaceState(null, '', '#' + t.id); });
+    }); });
   }
 
   /* ---------- calendario: apre il mese in corso ---------- */
@@ -114,7 +115,7 @@ var WA_NUM = '393420000730';
   }
 
   /* ---------- video: YouTube si carica solo al clic ---------- */
-  var vbox = document.getElementById('video');
+  var vbox = document.getElementById('elenco-video');
   if (vbox && window.VIDEO) VIDEO.forEach(function(v){
     var wrap = el('article', { class:'clip' });
     var fr = el('div', { class:'cornice' });
