@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://apicolturagabriele.github.io/sitemap.xml
