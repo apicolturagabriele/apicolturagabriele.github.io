@@ -392,3 +392,23 @@ main>section:nth-of-type(even) .passi li{background:var(--bianco)}
 @media (max-width:520px){.marca img{width:40px;height:40px}.marca small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .marca{flex:1 1 0}
 @media (max-width:520px){.marca b{font-size:1.05rem}}
+
+/* ---------- testata che accompagna lo scorrimento ---------- */
+html{scroll-padding-top:calc(var(--h-testata,76px) + 64px)}
+.testata{transition:box-shadow .2s}
+.testata .riga-marca{transition:min-height .2s}
+.testata.scrollato{box-shadow:0 6px 18px -12px rgba(46,39,32,.35)}
+.testata.scrollato .riga-marca{min-height:60px}
+.testata.scrollato .marca img{width:38px;height:38px}
+.marca img{transition:width .2s,height .2s}
+
+/* ---------- indice di pagina: segue lo scorrimento sotto la testata ---------- */
+.indice{position:sticky;top:var(--h-testata,76px);z-index:45;background:color-mix(in srgb,var(--carta) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--riga);border-top:1px solid var(--riga)}
+.indice .foglio{display:flex;align-items:center;gap:18px;min-height:52px}
+.indice span{font:600 .72rem/1 var(--f-testo);letter-spacing:.14em;text-transform:uppercase;color:var(--matita);flex:none}
+.indice .voci{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-block:8px}
+.indice .voci::-webkit-scrollbar{display:none}
+.indice a{white-space:nowrap;padding:7px 15px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;color:var(--matita);transition:background .15s,color .15s}
+.indice a:hover{color:var(--inchiostro);background:var(--carta-2)}
+.indice a.attivo{background:var(--inchiostro);color:var(--carta)}
+@media (max-width:700px){.indice span{display:none}.indice .foglio{min-height:48px}.indice a{font-size:.88rem;padding:6px 13px}}

@@ -29,6 +29,41 @@ var WA_NUM = '393420000730';
     mb.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
   });
 
+
+  /* ---------- testata e indice che seguono lo scorrimento ---------- */
+  var testata = document.querySelector('.testata');
+  function misura(){ if (testata) root.style.setProperty('--h-testata', testata.offsetHeight + 'px'); }
+  var eraScrollato = null;
+  function suScroll(){
+    if (!testata) return;
+    var sc = window.scrollY > 24;
+    if (sc !== eraScrollato) { eraScrollato = sc; testata.classList.toggle('scrollato', sc); setTimeout(misura, 220); misura(); }
+  }
+  window.addEventListener('scroll', suScroll, { passive:true });
+  window.addEventListener('resize', misura);
+  suScroll(); misura();
+  if (mb) mb.addEventListener('click', function(){ setTimeout(misura, 0); });
+
+  var indice = document.querySelector('.indice');
+  if (indice && 'IntersectionObserver' in window) {
+    var voci = indice.querySelector('.voci'), link = indice.querySelectorAll('a'), mappa = {};
+    link.forEach(function(a){ var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) mappa[t.id] = a; });
+    var visibili = {};
+    function attiva(){
+      var ids = Object.keys(mappa), scelto = null;
+      ids.forEach(function(id){ if (visibili[id]) scelto = id; });
+      if (!scelto) return;
+      link.forEach(function(a){ a.classList.toggle('attivo', a === mappa[scelto]); if (a === mappa[scelto]) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+      var a = mappa[scelto], x = a.offsetLeft - (voci.clientWidth - a.offsetWidth) / 2;
+      voci.scrollTo({ left: x, behavior: reduce ? 'auto' : 'smooth' });
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ visibili[e.target.id] = e.isIntersecting; });
+      attiva();
+    }, { rootMargin: '-140px 0px -55% 0px' });
+    Object.keys(mappa).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
   /* ---------- calendario: apre il mese in corso ---------- */
   var mesi = document.querySelectorAll('.mese');
   if (mesi.length === 12) {
