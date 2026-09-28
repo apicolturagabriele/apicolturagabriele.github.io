@@ -2,7 +2,9 @@
 
 Sito di Di. Di. P di Di Giuseppe Gabriele, Via Case Cicchetti, 64024 Notaresco (TE).
 
-Sito statico pubblicato con GitHub Pages, stessa impostazione di magrinigelati.it: una pagina unica (`index.html`), `privacy.html`, font ospitati in `fonts/`.
+Sito statico pubblicato con GitHub Pages, in stile "quaderno dell'apicoltore": carta, macchina da scrivere, appunti a mano e foto stampate.
+
+Sei pagine (`index`, `chi-siamo`, `prodotti`, `apicoltura`, `adotta-un-arnia`, `contatti`) più `privacy.html`. Stile in `stile.css`, script in `sito.js`, font in `fonts/` (Courier Prime, Caveat, Lora).
 
 ## Foto
 Foto e logo recuperati dal vecchio sito Jimdo, ottimizzati in `img/` (webp). Se una foto manca, al suo posto compare il motivo a favo.
