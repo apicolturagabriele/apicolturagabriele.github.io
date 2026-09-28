@@ -10,10 +10,12 @@
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Apicoltura Di Giuseppe Gabriele">
 <meta property="og:title" content="Apicoltura Di Giuseppe Gabriele, miele artigianale a Notaresco">
-<meta property="og:description" content="Il miele, il mio lavoro, la mia tradizione, la mia passione. Acacia, millefiori e girasole dalle colline del Teramano.">
+<meta property="og:description" content="Il miele, il mio lavoro, la mia tradizione, la mia passione. Acacia, millefiori e girasole dalle nostre arnie a Notaresco.">
 <meta property="og:url" content="https://apicolturagabriele.github.io/">
 <link rel="canonical" href="https://apicolturagabriele.github.io/">
 <meta property="og:image" content="https://apicolturagabriele.github.io/img/og-apicoltura.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FBF6EA">
 <link rel="icon" type="image/png" href="img/favicon.png">
@@ -35,6 +37,8 @@
   "name": "Di. Di. P di Di Giuseppe Gabriele",
   "alternateName": "Apicoltura Di Giuseppe Gabriele",
   "description": "Azienda apistica, miele naturale artigianale",
+  "url": "https://apicolturagabriele.github.io/",
+  "logo": "https://apicolturagabriele.github.io/img/logo.png",
   "telephone": "+39 342 0000730",
   "vatID": "IT02072780675",
   "address": {
@@ -45,6 +49,7 @@
     "addressRegion": "TE",
     "addressCountry": "IT"
   },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "reviewCount": "5" },
   "sameAs": [
     "https://www.facebook.com/Di.Di.PdiDiGiuseppeGabriele/",
     "https://www.instagram.com/apicoltura_digiuseppegabriele/"
@@ -115,7 +120,7 @@
 /* ============ BASE ============ */
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 [hidden]{display:none!important}
@@ -144,7 +149,7 @@ p{margin:0}
 
 /* cornice foto: se l'immagine manca resta un favo disegnato */
 .ph{position:relative;background-color:var(--miele-soft);overflow:hidden}
-.ph::before{content:"";position:absolute;inset:0;opacity:.55;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33M0 48l-0 0M56 48v0' fill='none' stroke='%23C98106' stroke-opacity='.45' stroke-width='1.5'/%3E%3C/svg%3E");background-size:56px 97px}
+.ph::before{content:"";position:absolute;inset:0;opacity:.55;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33' fill='none' stroke='%23C98106' stroke-opacity='.45' stroke-width='1.5'/%3E%3C/svg%3E");background-size:56px 97px}
 .ph img{position:relative;width:100%;height:100%;object-fit:cover}
 .ph-prod{background:#fff}
 .ph-prod::before{display:none}
@@ -159,8 +164,8 @@ p{margin:0}
 .brand-name{display:flex;flex-direction:column;line-height:1.05}
 .brand-name b{font:400 1.18rem/1 var(--f-display)}
 .brand-name small{font:400 .66rem/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.nav{display:flex;align-items:center;gap:4px}
-.nav a{font-weight:500;font-size:.96rem;text-decoration:none;padding:9px 12px;border-radius:999px;transition:background .2s}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{font-weight:500;font-size:.95rem;text-decoration:none;padding:9px 11px;border-radius:999px;transition:background .2s}
 .nav a:hover{background:var(--bg-alt)}
 .nav a.cta{background:var(--scuro);color:var(--on-scuro);margin-left:6px}
 .nav a.cta:hover{background:var(--acacia)}
@@ -175,7 +180,7 @@ p{margin:0}
   :root:not([data-theme="light"]) .theme-btn .sun{display:none}
   :root:not([data-theme="light"]) .theme-btn .moon{display:block}
 }
-@media (max-width:980px){
+@media (max-width:1040px){
   .menu-btn{display:grid}
   .nav{position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;gap:2px;padding:12px 16px 20px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:var(--shadow);display:none}
   .nav.open{display:flex}
@@ -184,7 +189,7 @@ p{margin:0}
 }
 
 /* ============ HERO ============ */
-.hero{padding-block:clamp(36px,6vw,80px) clamp(48px,7vw,96px)}
+.hero{padding-block:clamp(36px,6vw,80px) clamp(40px,6vw,80px)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
 .hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);line-height:1}
 .hero h1 em{font-style:normal;color:var(--miele)}
@@ -194,8 +199,10 @@ p{margin:0}
 .hero-meta span{display:flex;align-items:center;gap:8px}
 .hero-meta span::before{content:"";width:8px;height:9px;background:var(--miele-vivo);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
 .hero-figure{position:relative}
-.hero-figure .ph{aspect-ratio:1/0.9;width:100%;max-width:100%}
-.hero-badge{position:absolute;left:-4%;bottom:6%;background:var(--scuro);color:var(--on-scuro);padding:14px 18px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:2px;max-width:230px}
+.hero-figure .ph{aspect-ratio:1/0.9;width:100%}
+.hero-figure .ph img{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.hero-figure .ph img.on{opacity:1}
+.hero-badge{position:absolute;left:-4%;bottom:6%;background:var(--scuro);color:var(--on-scuro);padding:14px 18px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:2px;max-width:240px}
 .hero-badge b{font:400 1.2rem/1.1 var(--f-display);color:var(--miele-vivo)}
 .hero-badge small{font-size:.82rem;opacity:.85}
 @media (max-width:860px){
@@ -204,19 +211,38 @@ p{margin:0}
   .hero-badge{left:0}
 }
 
+/* ============ TICKER ============ */
+.ticker{background:var(--miele-vivo);color:var(--on-miele);overflow:hidden;border-block:1px solid color-mix(in srgb,var(--on-miele) 20%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:scorri 42s linear infinite}
+.ticker-track span{display:flex;align-items:center;gap:22px;padding:14px 11px;font:400 1.15rem/1 var(--f-display);white-space:nowrap}
+.ticker-track span::after{content:"";width:10px;height:11px;background:currentColor;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+@keyframes scorri{to{transform:translateX(-50%)}}
+
 /* ============ SEZIONI ============ */
 .section{padding-block:clamp(64px,9vw,120px)}
 .section-alt{background:var(--bg-alt)}
 .head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(32px,4vw,52px);max-width:720px}
+.head-row{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px 32px;margin-bottom:clamp(32px,4vw,52px)}
+.head-row .head{margin-bottom:0}
 
 /* chi siamo */
-.storia{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:center}
-.storia .ph{aspect-ratio:4/5;border-radius:var(--radius)}
+.storia{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.storia-foto{position:relative;padding-bottom:18%}
+.storia-foto .grande{aspect-ratio:3/4;border-radius:var(--radius);width:82%}
+.storia-foto .piccola{position:absolute;right:0;bottom:0;width:44%;aspect-ratio:9/16;border-radius:var(--radius);border:6px solid var(--bg-alt);box-shadow:var(--shadow)}
 .quote{font:400 clamp(1.45rem,2.6vw,2rem)/1.25 var(--f-display);border-left:3px solid var(--miele-vivo);padding-left:22px}
-.storia-text{display:flex;flex-direction:column;gap:22px}
+.storia-text{display:flex;flex-direction:column;gap:20px}
 .storia-text p{max-width:62ch}
 .firma{font:400 .82rem/1.4 var(--f-mono);letter-spacing:.06em;color:var(--muted)}
-@media (max-width:860px){.storia{grid-template-columns:1fr}.storia .ph{max-width:440px}}
+@media (max-width:860px){.storia{grid-template-columns:1fr}.storia-foto{max-width:460px}}
+
+/* banda fotografica a tutta larghezza */
+.band{position:relative;min-height:clamp(300px,48vw,560px);display:flex;align-items:flex-end;color:#FFF7E6;overflow:hidden;background:var(--scuro)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,4,0) 35%,rgba(20,12,4,.72))}
+.band-cap{position:relative;z-index:1;padding-block:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:10px}
+.band-cap p{font:400 clamp(1.6rem,3.6vw,2.8rem)/1.1 var(--f-display);max-width:22ch}
+.band-cap small{font:400 .76rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:#F6BD45}
 
 /* prodotti: etichette da vasetto */
 .mieli{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -239,42 +265,116 @@ p{margin:0}
 @media (max-width:980px){.mieli,.altri{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.mieli,.altri{grid-template-columns:1fr}}
 
-/* apicoltura: metodo + calendario */
+/* apicoltura: metodo */
 .metodo{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .metodo article{display:flex;flex-direction:column;gap:12px;padding-top:22px;border-top:2px solid var(--ink)}
 .metodo article p{color:var(--muted)}
-.cal-head{margin-top:clamp(56px,7vw,88px);margin-bottom:22px;display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px}
-.cal-scroll{overflow-x:auto;padding-bottom:6px}
-.cal{margin:0;padding:0;display:grid;grid-template-columns:repeat(12,minmax(88px,1fr));border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-width:1060px;background:var(--surface)}
-.cal li{list-style:none;padding:14px 12px 16px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:8px;font-size:.84rem;line-height:1.4}
-.cal li:last-child{border-right:0}
-.cal b{font:400 .74rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.cal .fio{height:8px;border-radius:4px;background:var(--line)}
-.cal .fio.on{background:var(--miele-vivo)}
-.cal ul{margin:0;padding:0}
-.cal-legend{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:8px}
-.cal-legend i{width:22px;height:8px;border-radius:4px;background:var(--miele-vivo);display:inline-block}
-.servizi{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:clamp(56px,7vw,88px)}
-.servizio{display:grid;grid-template-columns:1fr 1.1fr;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.servizio .ph{min-height:220px}
-.servizio div.txt{padding:24px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+@media (max-width:980px){.metodo{grid-template-columns:1fr}}
+
+/* calendario dell'apicoltore */
+.cal-wrap{margin-top:clamp(56px,7vw,88px)}
+.mesi-tabs{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;margin-bottom:18px}
+.mesi-tabs button{font:500 .78rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;padding:12px 4px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;position:relative}
+.mesi-tabs button.raccolto::after{content:"";position:absolute;left:50%;bottom:4px;width:14px;height:3px;margin-left:-7px;border-radius:2px;background:var(--miele-vivo)}
+.mesi-tabs button[aria-selected="true"]{background:var(--scuro);color:var(--on-scuro);border-color:var(--scuro)}
+.mese{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(22px,3vw,40px);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.mese .ph{min-height:320px}
+.mese-body{padding:clamp(22px,3vw,34px) clamp(22px,3vw,34px) clamp(22px,3vw,34px) 0;display:flex;flex-direction:column;gap:16px}
+.mese-body h3{font-size:2rem}
+.fiori{display:flex;flex-wrap:wrap;gap:6px}
+.fiori span{font-size:.84rem;padding:6px 11px;border-radius:999px;background:var(--acacia-soft);color:var(--acacia)}
+.mese-body p{color:var(--muted);max-width:64ch}
+.cal-note{margin-top:12px;font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.cal-note i{width:14px;height:3px;border-radius:2px;background:var(--miele-vivo);display:inline-block}
+@media (max-width:860px){
+  .mesi-tabs{grid-template-columns:repeat(6,1fr)}
+  .mese{grid-template-columns:1fr}
+  .mese .ph{min-height:0;aspect-ratio:16/10}
+  .mese-body{padding:0 22px 24px}
+}
+
+/* servizi */
+.servizi{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:clamp(56px,7vw,88px)}
+.servizio{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.sciami{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:4px;height:240px}
+.sciami .ph{height:100%}
+.servizio .txt{padding:24px;display:flex;flex-direction:column;gap:12px}
 .servizio .txt>p:not(.eyebrow){color:var(--muted);font-size:.96rem}
-.servizio a{font-weight:600;color:var(--acacia)}
-@media (max-width:980px){.metodo{grid-template-columns:1fr}.servizi{grid-template-columns:1fr}}
-@media (max-width:560px){.servizio{grid-template-columns:1fr}.servizio .ph{aspect-ratio:16/10;min-height:0}}
+.servizio .txt a{font-weight:600;color:var(--acacia)}
+.servizio .solo{aspect-ratio:16/10}
+@media (max-width:980px){.servizi{grid-template-columns:1fr}}
+@media (max-width:560px){.sciami{height:180px;grid-template-columns:1fr 1fr}.sciami .ph:last-child{display:none}}
+
+/* galleria foto */
+.gal{columns:4 220px;column-gap:10px}
+.gal button{display:block;width:100%;margin:0 0 10px;padding:0;border:0;border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--miele-soft);break-inside:avoid}
+.gal img{width:100%;height:auto;transition:transform .5s var(--ease)}
+.gal button:hover img{transform:scale(1.04)}
+.gal-more{margin-top:22px;display:flex;justify-content:center}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(12,8,3,.94);display:grid;grid-template-columns:64px 1fr 64px;align-items:center;padding:calc(56px + env(safe-area-inset-top,0px)) 8px calc(40px + env(safe-area-inset-bottom,0px))}
+.lb img{max-width:100%;max-height:100%;margin:auto;object-fit:contain;border-radius:6px}
+.lb-stage{height:100%;display:flex;align-items:center;justify-content:center;min-width:0}
+.lb button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center;margin:auto}
+.lb button svg{width:22px;height:22px}
+.lb .lb-close{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));right:12px;margin:0}
+.lb-count{position:absolute;left:0;right:0;bottom:calc(12px + env(safe-area-inset-bottom,0px));text-align:center;color:#FBF1DA;font:400 .8rem/1 var(--f-mono);letter-spacing:.1em}
+@media (max-width:640px){.lb{grid-template-columns:1fr;}.lb .lb-prev,.lb .lb-next{position:absolute;bottom:calc(20px + env(safe-area-inset-bottom,0px))}.lb .lb-prev{left:16px}.lb .lb-next{right:16px}}
+
+/* video */
+.video-head{margin-top:clamp(56px,7vw,88px)}
+.video{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.vid{display:flex;flex-direction:column;gap:10px}
+.vid-frame{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:var(--scuro)}
+.vid-frame button{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;background:var(--scuro)}
+.vid-frame button img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:opacity .2s}
+.vid-frame button:hover img{opacity:1}
+.vid-frame .play{position:absolute;left:50%;top:50%;width:58px;height:64px;margin:-32px 0 0 -29px;background:var(--miele-vivo);color:var(--on-miele);display:grid;place-items:center;clip-path:polygon(50% 0,97% 25%,97% 75%,50% 100%,3% 75%,3% 25%)}
+.vid-frame .play svg{width:22px;height:22px;margin-left:3px}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid p{font-weight:600;font-size:.95rem}
+.vid-note{margin-top:14px;font-size:.84rem;color:var(--muted)}
+@media (max-width:980px){.video{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.video{grid-template-columns:1fr}}
+
+/* miele a tavola */
+.tavola{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.tavola-intro{display:flex;flex-direction:column;gap:20px;position:sticky;top:100px}
+.tavola-intro .ph{aspect-ratio:3/2;border-radius:var(--radius)}
+.ricette{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.ricetta{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.ricetta .cella{width:46px;height:52px;display:grid;place-items:center;background:var(--miele-soft);color:var(--miele);font:400 1.1rem/1 var(--f-display)}
+.ricetta h3{font-size:1.4rem;margin-bottom:6px}
+.ricetta p{color:var(--muted)}
+.ricetta .abb{margin-top:10px;display:inline-block;font:400 .74rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:7px 10px;border-radius:999px;background:var(--acacia-soft);color:var(--acacia)}
+@media (max-width:860px){.tavola{grid-template-columns:1fr}.tavola-intro{position:static}}
 
 /* riconoscimenti */
 .premi{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.premio{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:26px;border-radius:var(--radius);background:var(--scuro);color:var(--on-scuro)}
-.medaglia{width:62px;height:70px;display:grid;place-items:center;background:var(--miele-vivo);color:var(--on-miele);font:400 1.05rem/1 var(--f-display)}
+.premio{display:flex;flex-direction:column;border-radius:var(--radius);background:var(--scuro);color:var(--on-scuro);overflow:hidden}
+.premio-foto{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:230px}
+.premio-foto .ph{height:100%}
+.premio-body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px}
 .premio .eyebrow{color:var(--miele-vivo)}
-.premio h3{margin:8px 0 10px;font-size:1.4rem}
+.premio h3{font-size:1.5rem}
 .premio p{opacity:.85;font-size:.96rem}
 .premio a{color:var(--miele-vivo)}
-.recensione{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;padding:26px 28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
-.recensione blockquote{margin:0;font:400 1.35rem/1.3 var(--f-display);max-width:44ch}
-.stelle{color:var(--miele-vivo);letter-spacing:3px;font-size:1.1rem}
 @media (max-width:860px){.premi{grid-template-columns:1fr}}
+
+/* recensioni */
+.rec{display:grid;grid-template-columns:.7fr 1.3fr;gap:22px;align-items:stretch}
+.voto{background:var(--miele-vivo);color:var(--on-miele);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:10px;justify-content:space-between}
+.voto b{font:400 4.4rem/1 var(--f-display)}
+.voto .stelle{color:var(--on-miele)}
+.voto .btn{background:var(--scuro);color:var(--on-scuro);align-self:flex-start}
+.stelle{color:var(--miele-vivo);letter-spacing:3px;font-size:1.1rem}
+.rec-list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rec-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:14px}
+.rec-card blockquote{margin:0;font:400 1.3rem/1.3 var(--f-display)}
+.rec-card footer{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);background:none;padding:0;margin-top:auto}
+.rec-card .ini{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--acacia);color:var(--bg);font-weight:700}
+@media (max-width:860px){.rec,.rec-list{grid-template-columns:1fr}}
 
 /* adotta un'arnia */
 .adotta{position:relative;background:var(--scuro);color:var(--on-scuro);overflow:hidden}
@@ -282,7 +382,7 @@ p{margin:0}
 .adotta .wrap{position:relative}
 .adotta .eyebrow{color:var(--miele-vivo)}
 .adotta .lead{color:color-mix(in srgb,var(--on-scuro) 78%,transparent)}
-.passi{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:clamp(40px,5vw,64px);counter-reset:passo}
+.passi{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 clamp(40px,5vw,64px);padding:0;list-style:none;counter-reset:passo}
 .passo{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
 .passo .cella{width:58px;height:64px;display:grid;place-items:center;background:var(--miele-vivo);color:var(--on-miele)}
 .passo .cella svg{width:26px;height:26px}
@@ -329,11 +429,12 @@ p{margin:0}
 .form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
 .form-msg{font-weight:600;color:var(--acacia)}
 .form-msg a{color:inherit}
+.form-note{margin-top:14px;font-size:.85rem;color:var(--muted)}
 @media (max-width:640px){.grid-form{grid-template-columns:1fr}}
 
 /* contatti */
 .contatti{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,64px);align-items:start}
-.recapiti{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.recapiti{display:flex;flex-direction:column;border-top:1px solid var(--line);margin:0}
 .recapiti div{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
 .recapiti dt{font:400 .74rem/1.8 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .recapiti dd{margin:0;font-weight:500}
@@ -342,10 +443,12 @@ p{margin:0}
 @media (max-width:860px){.contatti{grid-template-columns:1fr}}
 
 /* footer */
-footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
+.site-footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px}
+.foot-brand{display:flex;gap:16px;align-items:center}
+.foot-brand img{width:64px;height:64px;border-radius:50%}
 .foot p{font-size:.9rem;opacity:.8;line-height:1.7}
-.foot nav{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.92rem}
+.foot nav{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.92rem;max-width:520px}
 .foot nav a{text-decoration:none;opacity:.85}
 .foot nav a:hover{opacity:1;color:var(--miele-vivo)}
 .legal{margin-top:32px;padding-top:20px;border-top:1px solid rgba(246,235,211,.15);font:400 .76rem/1.6 var(--f-mono);opacity:.65;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
@@ -370,10 +473,11 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
       <span class="brand-name"><b>Apicoltura Gabriele</b><small>Di Giuseppe · Notaresco</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Menu principale">
-      <a href="#top">Home</a>
       <a href="#chi-siamo">Chi siamo</a>
       <a href="#prodotti">Prodotti</a>
       <a href="#apicoltura">La nostra apicoltura</a>
+      <a href="#galleria">Foto e video</a>
+      <a href="#miele-a-tavola">Ricette</a>
       <a href="#contatti">Contatti</a>
       <a class="cta" href="#adotta">Adotta un'arnia</a>
     </nav>
@@ -397,7 +501,7 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
     <div class="hero-copy">
       <p class="eyebrow">Azienda apistica · Notaresco (TE)</p>
       <h1>Il miele, il mio lavoro, la mia <em>tradizione</em>, la mia passione.</h1>
-      <p class="lead">Miele naturale artigianale di acacia, millefiori e girasole, prodotto dalle nostre api sulle colline del Teramano e invasettato a mano, un vasetto alla volta.</p>
+      <p class="lead">Miele naturale artigianale di acacia, millefiori e girasole, prodotto dalle nostre api a Notaresco e invasettato da noi, un vasetto alla volta.</p>
       <div class="hero-actions">
         <a class="btn btn-miele" href="#prodotti">Scopri i nostri mieli</a>
         <a class="btn btn-line" href="#adotta">Adotta un'arnia</a>
@@ -405,27 +509,52 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
       <div class="hero-meta">
         <span>Premio Eccellenze di Casa Nostra 2023</span>
         <span>Medaglia d'oro "I mieli del territorio"</span>
+        <span>5,0 su Google</span>
       </div>
     </div>
     <div class="hero-figure">
-      <div class="ph hex"><img src="img/hero-apiario.webp" alt="Le arnie dell'apiario di Gabriele Di Giuseppe tra gli alberi" width="1400" height="787" fetchpriority="high"></div>
+      <div class="ph hex" id="hero-slide">
+        <img class="on" src="img/hero-apiario.webp" alt="Le arnie colorate dell'apiario di Gabriele Di Giuseppe" width="1400" height="787" fetchpriority="high">
+        <img src="img/apiario-2.webp" alt="Le arnie tra gli alberi da frutto in fiore" width="1400" height="787" loading="lazy">
+        <img src="img/apiario-3.webp" alt="Una fila di arnie nel prato" width="1400" height="787" loading="lazy">
+        <img src="img/girasole.webp" alt="Un campo di girasoli in fiore" width="1051" height="1400" loading="lazy">
+      </div>
       <div class="hero-badge"><b>Dalle nostre arnie</b><small>alla tua tavola, senza passaggi intermedi</small></div>
     </div>
   </div>
 </section>
 
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Miele di acacia</span><span>Miele millefiori</span><span>Miele di girasole</span><span>Polline</span><span>Le Piccole Delizie</span><span>Bomboniere e segnaposto</span><span>Recupero sciami</span><span>Adotta un'arnia</span>
+    <span>Miele di acacia</span><span>Miele millefiori</span><span>Miele di girasole</span><span>Polline</span><span>Le Piccole Delizie</span><span>Bomboniere e segnaposto</span><span>Recupero sciami</span><span>Adotta un'arnia</span>
+  </div>
+</div>
+
 <!-- ============ CHI SIAMO ============ -->
 <section class="section section-alt" id="chi-siamo">
   <div class="wrap storia">
-    <div class="ph"><img src="img/gabriele.webp" alt="Gabriele Di Giuseppe al lavoro tra le arnie" loading="lazy" width="768" height="1024"></div>
+    <div class="storia-foto">
+      <div class="ph grande"><img src="img/gabriele-lavoro.webp" alt="Gabriele Di Giuseppe apre un'arnia con tuta e maschera da apicoltore" loading="lazy" width="750" height="1000"></div>
+      <div class="ph piccola"><img src="img/gabriele-sciame.webp" alt="Gabriele accanto a uno sciame posato su un ramo" loading="lazy" width="394" height="700"></div>
+    </div>
     <div class="storia-text">
       <p class="eyebrow">Chi siamo</p>
-      <h2>Una passione nata in famiglia</h2>
+      <h2>Dal timore alla passione</h2>
       <p class="quote">"La mia passione per le api ed il miele nasce in famiglia: è stato mio padre ad insegnarmi a conoscere questi animali ed a scoprire il loro mondo."</p>
-      <p>Sono Gabriele Di Giuseppe e da quella curiosità di bambino è nata un'azienda apistica vera e propria, la Di. Di. P., con sede a Notaresco, in provincia di Teramo. Seguo personalmente ogni fase: la cura delle famiglie di api, gli spostamenti in base alle fioriture, la smielatura e il confezionamento.</p>
-      <p>Produciamo poco e con attenzione, perché il miele buono dipende dal rispetto dei tempi delle api e del territorio in cui vivono.</p>
+      <p>Una singola ape ha dietro di sé una moltitudine di sue simili, e ognuna ha il suo compito. Ogni giorno ognuna torna "a casa" dopo aver lavorato, proprio come noi, proprio come in una famiglia.</p>
+      <p>Mi ricordo quando per la prima volta ho visto un alveare e la paura che ho provato! Ma nello stesso momento ho osservato la naturalezza con cui mio padre si avvicinava e la cura che aveva in ogni gesto. Ho pensato che avrei voluto anch'io quella padronanza, mista a profondo rispetto verso un'opera così grande realizzata da creature così piccole.</p>
+      <p>Così tutto è iniziato: dal timore alla scoperta, dall'osservazione alla pratica, dall'ammirazione alla riconoscenza e alla passione.</p>
       <p class="firma">Gabriele Di Giuseppe · apicoltore</p>
     </div>
+  </div>
+</section>
+
+<section class="band" aria-label="L'apiario in fioritura">
+  <img src="img/apiario-fioritura.webp" alt="Le arnie dell'apiario allineate tra i peschi in fiore" loading="lazy" width="1599" height="899">
+  <div class="wrap band-cap">
+    <small>Notaresco · primavera</small>
+    <p>Quando fioriscono i frutteti, le api ripartono.</p>
   </div>
 </section>
 
@@ -439,24 +568,24 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
     </div>
     <div class="mieli">
       <article class="vaso">
-        <div class="ph ph-prod"><img src="img/miele-acacia.webp" alt="Vasetto di miele di acacia" loading="lazy" width="800" height="600"></div>
+        <div class="ph ph-prod"><img src="img/miele-acacia.webp" alt="Vasetto di miele di acacia Di Giuseppe Gabriele" loading="lazy" width="800" height="670"></div>
         <div class="vaso-body">
           <div class="vaso-top"><h3>Miele di Acacia</h3><span class="tono hex-v" style="background:var(--tono-acacia)" title="Colore del miele di acacia"></span></div>
           <dl>
-            <dt>Fioritura</dt><dd>aprile e maggio</dd>
+            <dt>Fioritura</dt><dd>maggio</dd>
             <dt>Colore</dt><dd>chiarissimo, quasi trasparente</dd>
-            <dt>Gusto</dt><dd>delicato, dolce, con note di vaniglia</dd>
+            <dt>Gusto</dt><dd>delicato e dolce</dd>
             <dt>Stato</dt><dd>resta liquido a lungo</dd>
           </dl>
           <div class="formati" aria-label="Formati disponibili"><span>250 g</span><span>500 g</span><span>1 kg</span></div>
         </div>
       </article>
       <article class="vaso">
-        <div class="ph ph-prod"><img src="img/miele-millefiori.webp" alt="Vasetto di miele millefiori" loading="lazy" width="800" height="600"></div>
+        <div class="ph ph-prod"><img src="img/miele-millefiori.webp" alt="Vasetto di miele millefiori Di Giuseppe Gabriele" loading="lazy" width="800" height="1073"></div>
         <div class="vaso-body">
           <div class="vaso-top"><h3>Miele Millefiori</h3><span class="tono hex-v" style="background:var(--tono-millefiori)" title="Colore del miele millefiori"></span></div>
           <dl>
-            <dt>Fioritura</dt><dd>da primavera a estate</dd>
+            <dt>Fioritura</dt><dd>primavera ed estate</dd>
             <dt>Colore</dt><dd>ambrato, varia di anno in anno</dd>
             <dt>Gusto</dt><dd>pieno e floreale, racconta il territorio</dd>
             <dt>Stato</dt><dd>cristallizza in modo naturale</dd>
@@ -465,11 +594,11 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
         </div>
       </article>
       <article class="vaso">
-        <div class="ph ph-prod"><img src="img/miele-girasole.webp" alt="Vasetto di miele di girasole" loading="lazy" width="800" height="600"></div>
+        <div class="ph ph-prod"><img src="img/miele-girasole.webp" alt="Vasetto di miele di girasole Di Giuseppe Gabriele" loading="lazy" width="800" height="1013"></div>
         <div class="vaso-body">
           <div class="vaso-top"><h3>Miele di Girasole</h3><span class="tono hex-v" style="background:var(--tono-girasole)" title="Colore del miele di girasole"></span></div>
           <dl>
-            <dt>Fioritura</dt><dd>luglio</dd>
+            <dt>Fioritura</dt><dd>luglio e agosto</dd>
             <dt>Colore</dt><dd>giallo oro intenso</dd>
             <dt>Gusto</dt><dd>fresco, leggermente fruttato</dd>
             <dt>Stato</dt><dd>cristallizza presto, fine e cremoso</dd>
@@ -481,15 +610,15 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
 
     <div class="altri">
       <article class="mini">
-        <div class="ph"><img src="img/piccole-delizie.webp" alt="Vasetti Le Piccole Delizie da 40 grammi" loading="lazy" width="400" height="400"></div>
+        <div class="ph"><img src="img/piccole-delizie.webp" alt="Confezione Le Piccole Delizie con otto vasetti da 40 grammi" loading="lazy" width="700" height="593"></div>
         <div><h3>Le Piccole Delizie</h3><p>Vasetti da 40 g, ideali da assaggiare o da regalare.</p></div>
       </article>
       <article class="mini">
-        <div class="ph"><img src="img/polline.webp" alt="Polline d'api in granuli" loading="lazy" width="400" height="400"></div>
+        <div class="ph"><img src="img/polline-secchio.webp" alt="Polline d'api in granuli appena raccolto" loading="lazy" width="394" height="700"></div>
         <div><h3>Polline</h3><p>Raccolto dalle nostre api, in granuli.</p></div>
       </article>
       <article class="mini">
-        <div class="ph"><img src="img/bomboniere.webp" alt="Bomboniere e segnaposto al miele fatti a mano" loading="lazy" width="400" height="400"></div>
+        <div class="ph"><img src="img/bomboniere.webp" alt="Bomboniere e segnaposto al miele fatti a mano" loading="lazy" width="800" height="800"></div>
         <div><h3>Bomboniere e segnaposto</h3><p>Fatti a mano e personalizzati per il tuo ricordo più dolce.</p></div>
       </article>
     </div>
@@ -507,54 +636,97 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
     <div class="head">
       <p class="eyebrow">La nostra apicoltura</p>
       <h2>Il lavoro in apiario, stagione dopo stagione</h2>
-      <p class="lead">Un'apicoltura artigianale: poche arnie seguite una per una, il rispetto delle api prima di tutto e un miele che arriva in vasetto così come lo fanno loro.</p>
+      <p class="lead">Un'apicoltura artigianale: arnie seguite una per una, il rispetto delle api prima di tutto e un miele che arriva in vasetto così come lo fanno loro.</p>
     </div>
     <div class="metodo">
-      <article><h3>Le api al centro</h3><p>Controlliamo le famiglie con regolarità durante tutto l'anno e lasciamo alle api le scorte che servono per superare l'inverno.</p></article>
-      <article><h3>Il territorio</h3><p>Le arnie si trovano sulle colline tra Notaresco e il mare, dove le fioriture di acacia, girasole e prati spontanei danno il carattere ai nostri mieli.</p></article>
-      <article><h3>Lavorazione a mano</h3><p>Il miele viene estratto dai favi, lasciato riposare e invasettato da noi, senza aggiunte. Per questo ogni annata ha qualcosa di diverso.</p></article>
+      <article><h3>Come una famiglia</h3><p>Ogni ape ha il suo compito e ogni colonia va seguita da vicino: controlliamo la regina, la covata e le scorte, soprattutto prima dell'inverno.</p></article>
+      <article><h3>Seguire le fioriture</h3><p>L'acacia a maggio, il millefiori di primavera, il girasole in estate. Ogni miele nasce da una fioritura precisa e dal lavoro delle api in quel momento.</p></article>
+      <article><h3>Solo miele maturo</h3><p>Smieliamo solo il miele opercolato, cioè maturo e già sigillato dalle api nelle cellette del favo. Poi lo invasettiamo noi, senza aggiunte.</p></article>
     </div>
 
-    <div class="cal-head">
-      <div class="stack" style="gap:10px"><p class="eyebrow">Il calendario dell'apicoltore</p><h3>L'anno in apiario</h3></div>
-      <p class="cal-legend"><i></i>periodo di raccolto</p>
-    </div>
-    <div class="cal-scroll" tabindex="0" aria-label="Calendario dei lavori in apiario, scorrevole">
-      <ul class="cal">
-        <li><b>Gen</b><span class="fio"></span>Riposo invernale, controllo esterno delle arnie e delle scorte.</li>
-        <li><b>Feb</b><span class="fio"></span>Preparazione di telaini e attrezzatura per la nuova stagione.</li>
-        <li><b>Mar</b><span class="fio"></span>Prime visite complete: la regina riprende a deporre.</li>
-        <li><b>Apr</b><span class="fio on"></span>Fioritura dell'acacia, si posano i melari.</li>
-        <li><b>Mag</b><span class="fio on"></span>Raccolto dell'acacia e periodo delle sciamature.</li>
-        <li><b>Giu</b><span class="fio on"></span>Fioriture di campo per il millefiori.</li>
-        <li><b>Lug</b><span class="fio on"></span>Girasole e smielatura estiva.</li>
-        <li><b>Ago</b><span class="fio"></span>Cura sanitaria delle famiglie dopo i raccolti.</li>
-        <li><b>Set</b><span class="fio"></span>Controllo delle scorte e delle regine.</li>
-        <li><b>Ott</b><span class="fio"></span>Le famiglie si preparano all'inverno.</li>
-        <li><b>Nov</b><span class="fio"></span>Arnie chiuse, lavori in laboratorio.</li>
-        <li><b>Dic</b><span class="fio"></span>Confezioni regalo e bomboniere.</li>
-      </ul>
+    <div class="cal-wrap" id="calendario">
+      <div class="head-row">
+        <div class="head">
+          <p class="eyebrow">Rubrica · Il calendario dell'apicoltore</p>
+          <h3 style="font-size:clamp(1.8rem,3.4vw,2.5rem)">Cosa succede in apiario, mese per mese</h3>
+        </div>
+      </div>
+      <div class="mesi-tabs" role="tablist" aria-label="Mesi dell'anno" id="mesi-tabs"></div>
+      <article class="mese" id="mese" role="tabpanel" aria-live="polite">
+        <div class="ph"><img id="mese-img" src="img/mesi/settembre.webp" alt="" loading="lazy" width="900" height="600"></div>
+        <div class="mese-body">
+          <p class="eyebrow" id="mese-eyebrow">Mese in corso</p>
+          <h3 id="mese-nome">Settembre</h3>
+          <div><p class="eyebrow" style="margin-bottom:8px;color:var(--muted)">Cosa fiorisce</p><div class="fiori" id="mese-fiori"></div></div>
+          <p id="mese-testo"></p>
+        </div>
+      </article>
+      <p class="cal-note"><i></i>mesi di raccolto del miele</p>
     </div>
 
     <div class="servizi">
       <article class="servizio">
-        <div class="ph"><img src="img/sciame.webp" alt="Recupero di uno sciame d'api" loading="lazy" width="600" height="600"></div>
+        <div class="sciami">
+          <div class="ph"><img src="img/sciame-muro.webp" alt="Sciame d'api posato su un muro di mattoni" loading="lazy" width="1000" height="563"></div>
+          <div class="ph"><img src="img/sciame-albero.webp" alt="Sciame d'api appeso al ramo di un albero" loading="lazy" width="450" height="800"></div>
+          <div class="ph"><img src="img/sciame-pino.webp" alt="Sciame d'api tra gli aghi di un pino" loading="lazy" width="529" height="800"></div>
+        </div>
         <div class="txt">
           <p class="eyebrow">Servizio</p>
           <h3>Recupero e rimozione sciami</h3>
-          <p>Uno sciame si è posato in giardino, su un albero o in un muro? Interveniamo per recuperarlo senza fare del male alle api e dargli una nuova casa.</p>
+          <p>Uno sciame si è posato in giardino, su un albero o su un muro? Interveniamo per recuperarlo senza fare del male alle api e dargli una nuova casa. Massima disponibilità.</p>
           <a href="https://wa.me/393420000730?text=Ciao%20Gabriele%2C%20ho%20bisogno%20del%20recupero%20di%20uno%20sciame%20a%20" target="_blank" rel="noopener">Segnala uno sciame su WhatsApp</a>
         </div>
       </article>
       <article class="servizio">
-        <div class="ph ph-prod"><img src="img/bomboniere.webp" alt="Bomboniere e segnaposto al miele fatti a mano" loading="lazy" width="600" height="600"></div>
+        <div class="ph ph-prod solo"><img src="img/bomboniere.webp" alt="Bomboniere e segnaposto al miele, il tuo ricordo più dolce" loading="lazy" width="800" height="800"></div>
         <div class="txt">
           <p class="eyebrow">Handmade</p>
           <h3>Bomboniere su misura</h3>
-          <p>Matrimoni, battesimi, comunioni: prepariamo a mano bomboniere e segnaposto al miele, personalizzati con nomi e date.</p>
+          <p>Matrimoni, battesimi, comunioni: prepariamo a mano bomboniere e segnaposto al miele, personalizzati. Chiama e personalizza il tuo ricordo più dolce.</p>
           <a href="#contatti">Chiedi un preventivo</a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERIA ============ -->
+<section class="section" id="galleria">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Foto e video</p>
+      <h2>Una stagione tra le arnie</h2>
+      <p class="lead">Sciami, favi, smielature e qualche nevicata: il nostro lavoro raccontato per immagini. Tocca una foto per ingrandirla.</p>
+    </div>
+    <div class="gal" id="gal"></div>
+    <div class="gal-more"><button class="btn btn-line" id="gal-more" type="button">Mostra tutte le foto</button></div>
+
+    <div class="head video-head">
+      <p class="eyebrow">Video</p>
+      <h3 style="font-size:clamp(1.8rem,3.4vw,2.5rem)">Guarda le api al lavoro</h3>
+    </div>
+    <div class="video" id="video"></div>
+    <p class="vid-note">I video sono ospitati su YouTube e si caricano solo quando premi play.</p>
+  </div>
+</section>
+
+<!-- ============ MIELE A TAVOLA ============ -->
+<section class="section section-alt" id="miele-a-tavola">
+  <div class="wrap tavola">
+    <div class="tavola-intro">
+      <p class="eyebrow">Il miele a tavola</p>
+      <h2>Dolcezza naturale</h2>
+      <p class="lead">Da sempre il miele è una valida alternativa allo zucchero: la sua composizione di glucosio e fruttosio lo rende, in cucina, insostituibile.</p>
+      <p style="color:var(--muted)">Inumidisce al meglio dolci e torte e ne allunga la conservazione. A crudo regala tutto il suo aroma, soprattutto con i formaggi.</p>
+      <div class="ph"><img src="img/miele-a-tavola.webp" alt="Miele versato da un cucchiaio di legno" loading="lazy" width="550" height="365"></div>
+    </div>
+    <div class="ricette">
+      <article class="ricetta"><span class="cella hex-v">1</span><div><h3>Cheesecake al miele</h3><p>Una versione light della torta di formaggio americana, dove yogurt greco e miele prendono il posto di panna e zucchero. Da servire da sola, con frutta fresca o con salse alla frutta o al cioccolato.</p><span class="abb">Con acacia</span></div></article>
+      <article class="ricetta"><span class="cella hex-v">2</span><div><h3>Struffoli</h3><p>Il dolce delle feste, a Natale e a Carnevale: palline di pasta fritta, croccanti e irresistibili, affogate nel miele e coperte di confettini colorati.</p><span class="abb">Con millefiori</span></div></article>
+      <article class="ricetta"><span class="cella hex-v">3</span><div><h3>Crêpes dolci al miele</h3><p>Una delle ricette più semplici e più golose: bastano pochi minuti per una colazione veloce ma originale.</p><span class="abb">Con acacia o millefiori</span></div></article>
+      <article class="ricetta"><span class="cella hex-v">4</span><div><h3>Treccina miele e noci pecan</h3><p>Il binomio perfetto per una colazione nutriente e golosa.</p><span class="abb">Con millefiori</span></div></article>
+      <article class="ricetta"><span class="cella hex-v">5</span><div><h3>Ravioli al formaggio e miele</h3><p>Ravioli fatti in casa, ripieni di pecorino saporito e accompagnati da una coppetta di miele dolce.</p><span class="abb">Con acacia</span></div></article>
     </div>
   </div>
 </section>
@@ -568,25 +740,55 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
     </div>
     <div class="premi">
       <article class="premio">
-        <span class="medaglia hex-v">2023</span>
-        <div>
-          <p class="eyebrow">Certificazione</p>
+        <div class="premio-foto">
+          <div class="ph"><img src="img/medaglia-eccellenza.webp" alt="Medaglia Eccellenze di Casa Nostra con l'ape in rilievo" loading="lazy" width="800" height="800"></div>
+          <div class="ph"><img src="img/attestato-eccellenze.webp" alt="Attestato del Premio Eccellenze di Casa Nostra 2023 ad Apicoltura Gabriele Di Giuseppe" loading="lazy" width="900" height="674"></div>
+        </div>
+        <div class="premio-body">
+          <p class="eyebrow">Certificazione 2023</p>
           <h3>Premio Eccellenze di Casa Nostra</h3>
-          <p>Un riconoscimento a chi lavora nel proprio settore con impegno ed entusiasmo, superando ogni giorno gli ostacoli e guardando al futuro con ottimismo.</p>
+          <p>"L'eccellenza è il giusto riconoscimento a chi fiducioso opera nel proprio settore con abnegazione ed entusiasmo, superando quotidianamente gli ostacoli e guardando al futuro con ottimismo."</p>
         </div>
       </article>
       <article class="premio">
-        <span class="medaglia hex-v">Oro</span>
-        <div>
-          <p class="eyebrow">Concorso C.A. Iannetti</p>
+        <div class="premio-foto">
+          <div class="ph"><img src="img/medaglie-iannetti.webp" alt="Le due medaglie d'oro del concorso I mieli del territorio" loading="lazy" width="900" height="675"></div>
+          <div class="ph"><img src="img/premiazione-iannetti.webp" alt="La premiazione del concorso con studenti e apicoltori" loading="lazy" width="1000" height="535"></div>
+        </div>
+        <div class="premio-body">
+          <p class="eyebrow">Concorso C.A. Iannetti 2022</p>
           <h3>I mieli del territorio</h3>
-          <p>Due medaglie d'oro: una per il miele di acacia e una per il miele uniflorale, consegnate all'Istituto Agrario Di Poppa-Rozzi di Teramo. <a href="https://www.emmelle.it/2023/12/22/ecco-i-vincitori-del-concorso-i-mieli-del-territorio/" target="_blank" rel="noopener">Leggi l'articolo</a></p>
+          <p>Due medaglie d'oro: una per il miele di acacia e una per il miele uniflorale, consegnate all'Istituto Agrario Di Poppa-Rozzi davanti a studenti e apicoltori. <a href="https://www.emmelle.it/2023/12/22/ecco-i-vincitori-del-concorso-i-mieli-del-territorio/" target="_blank" rel="noopener">Leggi l'articolo</a></p>
         </div>
       </article>
     </div>
-    <div class="recensione">
-      <blockquote>"Ottimo miele. Alta qualità. Persona seria e disponibile. Consigliatissimo."</blockquote>
-      <span class="stelle" aria-label="Recensione a 5 stelle">★★★★★</span>
+  </div>
+</section>
+
+<!-- ============ RECENSIONI ============ -->
+<section class="section section-alt" id="recensioni">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Recensioni</p>
+      <h2>Cosa dice chi ci ha assaggiato</h2>
+    </div>
+    <div class="rec">
+      <div class="voto">
+        <div><b>5,0</b><div class="stelle" aria-label="5 stelle su 5">★★★★★</div><p style="margin-top:8px">Valutazione su Google</p></div>
+        <a class="btn" href="https://g.page/ApicolturaDiDiPDiGiuseppeGabr/review?gm" target="_blank" rel="noopener">Scrivi una recensione</a>
+      </div>
+      <div class="rec-list">
+        <figure class="rec-card" style="margin:0">
+          <span class="stelle" aria-label="5 stelle">★★★★★</span>
+          <blockquote>"Ottimo miele. Alta qualità! Persona seria e disponibile. Consigliatissimo."</blockquote>
+          <footer><span class="ini">M</span>M. Leonzi · Google</footer>
+        </figure>
+        <figure class="rec-card" style="margin:0">
+          <span class="stelle" aria-label="5 stelle">★★★★★</span>
+          <blockquote>"Miele di ottima qualità. Titolare molto gentile e disponibile."</blockquote>
+          <footer><span class="ini">V</span>V. Pavone · Google</footer>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -600,7 +802,7 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
       <p class="lead">Con l'adozione sostieni un'apicoltura artigianale e la salute delle api del nostro territorio. In cambio ricevi il certificato con il nome della tua arnia e il miele che ha prodotto.</p>
     </div>
 
-    <ol class="passi" style="list-style:none;padding:0;margin-top:0">
+    <ol class="passi">
       <li class="passo">
         <span class="cella hex-v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.6v8.8L12 21l-8-4.6V7.6z"/><path d="M9 12l2 2 4-4"/></svg></span>
         <div><h3>Scegli il pacchetto</h3><p>Compila il modulo con il pacchetto e il nome da scrivere sul certificato.</p></div>
@@ -652,13 +854,13 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
         <h3>Il tuo certificato</h3>
         <p class="sub">Riporta il nome che scegli tu, anche quello di una persona a cui vuoi regalare l'adozione. Ecco un esempio.</p>
         <div class="cert-card" aria-label="Esempio di certificato di adozione">
-        <small>Certificato di adozione</small>
-        <b>Mario Rossi</b>
-        <p>è custode di 60.000 amiche nell'apiario di Gabriele Di Giuseppe a Notaresco.</p>
-        <div class="riga"><span>Pacchetto: Favo d'Oro</span><span>Stagione 2026</span></div>
+          <small>Certificato di adozione</small>
+          <b>Mario Rossi</b>
+          <p>è custode di 60.000 amiche nell'apiario di Gabriele Di Giuseppe a Notaresco.</p>
+          <div class="riga"><span>Pacchetto: Favo d'Oro</span><span>Stagione 2026</span></div>
         </div>
       </div>
-      <form class="form-box lead-form" id="modulo-adozione" data-subject="Nuova richiesta di adozione arnia" novalidate>
+      <form class="form-box lead-form" id="modulo-adozione" data-subject="Richiesta di adozione arnia" novalidate>
         <div class="grid-form">
           <div class="field full">
             <label for="a-pacchetto">Pacchetto</label>
@@ -670,8 +872,8 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
           </div>
           <div class="field"><label for="a-nome">Nome e cognome</label><input id="a-nome" name="nome" autocomplete="name" required></div>
           <div class="field"><label for="a-certificato">Nome sul certificato</label><input id="a-certificato" name="nome_certificato" placeholder="Anche un regalo per qualcuno"></div>
-          <div class="field"><label for="a-email">Email (facoltativa)</label><input id="a-email" name="email" type="email" autocomplete="email"></div>
           <div class="field"><label for="a-tel">Telefono o WhatsApp</label><input id="a-tel" name="telefono" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="a-email">Email (facoltativa)</label><input id="a-email" name="email" type="email" autocomplete="email"></div>
           <div class="field full"><label for="a-note">Note</label><textarea id="a-note" name="messaggio" placeholder="Dedica, data di consegna, domande..."></textarea></div>
           <label class="check full"><input id="a-privacy" type="checkbox" name="privacy" required><span>Ho letto l'<a href="privacy.html">informativa privacy</a> e acconsento a essere ricontattato.</span></label>
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -680,7 +882,7 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
             <p class="form-msg" role="status" hidden></p>
           </div>
         </div>
-        <p style="margin-top:14px;font-size:.85rem;color:var(--muted)">La richiesta arriva direttamente sul WhatsApp di Gabriele. Nessun pagamento online: ti ricontatta lui con i dati per bonifico o PayPal.</p>
+        <p class="form-note">La richiesta arriva direttamente sul WhatsApp di Gabriele. Nessun pagamento online: ti ricontatta lui con i dati per bonifico o PayPal.</p>
       </form>
     </div>
   </div>
@@ -704,10 +906,10 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
       <div class="social">
         <a class="btn btn-line" href="https://www.facebook.com/Di.Di.PdiDiGiuseppeGabriele/" target="_blank" rel="noopener">Facebook</a>
         <a class="btn btn-line" href="https://www.instagram.com/apicoltura_digiuseppegabriele/" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Case+Cichetti+64024+Notaresco+TE" target="_blank" rel="noopener">Indicazioni</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x1331c100fd895037:0x462c915a9a52471e" target="_blank" rel="noopener">Indicazioni</a>
       </div>
     </div>
-    <form class="form-box lead-form" id="modulo-contatti" data-subject="Nuovo messaggio dal sito" novalidate>
+    <form class="form-box lead-form" id="modulo-contatti" data-subject="Messaggio dal sito" novalidate>
       <div class="grid-form">
         <div class="field"><label for="c-nome">Nome e cognome</label><input id="c-nome" name="nome" autocomplete="name" required></div>
         <div class="field"><label for="c-tel">Telefono</label><input id="c-tel" name="telefono" type="tel" autocomplete="tel" required></div>
@@ -735,12 +937,15 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
 </section>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
     <div class="foot">
-      <p><strong>Di. Di. P di Di Giuseppe Gabriele</strong><br>Via Case Cichetti, 64024 Notaresco (TE)<br>P.IVA 02072780675 · Tel. 342 0000730</p>
+      <div class="foot-brand">
+        <img src="img/logo.png" alt="" width="64" height="64" loading="lazy">
+        <p><strong>Di. Di. P di Di Giuseppe Gabriele</strong><br>Via Case Cichetti, 64024 Notaresco (TE)<br>P.IVA 02072780675 · Tel. 342 0000730</p>
+      </div>
       <nav aria-label="Menu a piè di pagina">
-        <a href="#chi-siamo">Chi siamo</a><a href="#prodotti">Prodotti</a><a href="#apicoltura">La nostra apicoltura</a><a href="#riconoscimenti">Riconoscimenti</a><a href="#adotta">Adotta un'arnia</a><a href="#contatti">Contatti</a>
+        <a href="#chi-siamo">Chi siamo</a><a href="#prodotti">Prodotti</a><a href="#apicoltura">La nostra apicoltura</a><a href="#calendario">Calendario dell'apicoltore</a><a href="#galleria">Foto e video</a><a href="#miele-a-tavola">Ricette</a><a href="#riconoscimenti">Riconoscimenti</a><a href="#recensioni">Recensioni</a><a href="#adotta">Adotta un'arnia</a><a href="#contatti">Contatti</a>
       </nav>
     </div>
     <div class="legal">
@@ -754,21 +959,49 @@ footer{background:var(--scuro);color:var(--on-scuro);padding-block:48px 32px}
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.3 21.8l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.2-.3z"/></svg>
 </a>
 
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+  <button class="lb-prev" type="button" aria-label="Foto precedente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="lb-stage"><img id="lb-img" src="" alt=""></div>
+  <button class="lb-next" type="button" aria-label="Foto successiva"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button class="lb-close" type="button" aria-label="Chiudi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <p class="lb-count" id="lb-count"></p>
+</div>
+
 <script>
 /* I moduli non passano da email: compongono il messaggio e lo aprono su
    WhatsApp, già scritto, verso il numero di Gabriele. */
 var WA_NUM = '393420000730';
 
+/* Calendario dell'apicoltore: testi della rubrica di Gabriele */
+var MESI = [{"f": "il nespolo", "t": "Il lavoro dell’apicoltore in inverno si concentra sulla manutenzione delle arnie e degli apiari. Si fanno lavori di falegnameria, si ripuliscono gli strumenti da lavoro, si revisionano le arnie vuote giacenti in magazzino, ci si comincia a procurare fogli cerei, telaini, filo, per armare i telaini e ad applicare i fogli cerei sia per il melario che per il nido. Nelle regioni più calde si può cominciare a nutrire le famiglie con la soluzione zuccherina."}, {"f": "il mandorlo, il rosmarino, l’erica, il tarassaco, la rapa, i cavoli e la colza", "t": "Aumentano le giornate di sole, durante le quali le api volano in cerca di polline e di acqua per la prima covata che all’interno dell’alveare comincia a svilupparsi. Nei pressi dell’apiario si colloca un abbeveratoio nutriente. Questo perché le api non si allontanino troppo dall’apiario in cerca di sostanze minerali e rischiando così di non rientrare a causa del freddo. Se alla fine del mese sono presenti fioriture (come l’erica) è utile portare le arnie a bottinarle per fortificare le famiglie."}, {"f": "il rosmarino, la rapa, la colza, la rucola, il mandorlo", "t": "Nonostante il tempo ballerino, marzo è il mese in cui riprendono “ufficialmente” i lavori in apiario. È infatti adesso che le visite si fanno più frequenti e che si iniziano a prendere quegli accorgimenti necessari per affrontare nel modo migliore l’inizio delle fioriture. Ovviamente si raccoglie quello che si è seminato: se si è eseguito un corretto invernamento si avranno quasi sicuramente famiglie che hanno svernato bene, pronte a ripartire con la raccolta e senza grossi problemi. Le api cominciano l’attività frenetica. L’apicoltore visita le colonie con maggior frequenza per controllare la regina e la presenza di covata. Se in questo mese è tornato il freddo si regola la porticina d’ingresso per proteggere la covata dagli spifferi."}, {"f": "l’albicocco, il pesco, il susino, il ciliegio, il melo, il pero, il salice, la borragine, il cisto, l’erica, la rapa, la colza, la rucola", "t": "Finalmente è arrivata la primavera! Sperando non ritorni il freddo, si deve cercare di mantenere le famiglie al caldo fino al nuovo innalzamento delle temperature. Il mese di aprile è un mese fondamentale per lo sviluppo. I ritmi aumentano sia all’interno dell’arnia che per l’apicoltore che andrà ad aumentare le attività di controllo ed i lavori in apiario. Si possono iniziare a togliere le eventuali protezioni invernali ed a dare spazio alla famiglia in fase di sviluppo. Si possono aggiungere telaini costruiti rimandando l’aggiunta di fogli cerei alla seconda metà del mese, quando nasceranno le api della nuova covata. Bisogna conoscere lo stato della famiglia e valutare la necessità dell’eventuale nutrizione di supporto. In questo periodo, se predomina il bel tempo, la natura fa il resto. Le fioriture sono molte ed il nettare si trova in abbondanza nei fiori di campo e nelle copiose fioriture degli alberi da frutto. Il periodo di sciamatura ancora è minimo, tuttavia il bravo apicoltore, conoscendo il proprio apiario e sapendo valutare l’equilibrio della famiglia, sa quali sono quelle con forte propensione alla sciamatura e deve controllarne attentamente lo sviluppo. Si deve inoltre iniziare a ripulire la zona dell’apiario per evitare infestazioni di erba o rovi che andranno successivamente a ricoprire le arnie."}, {"f": "l’acacia, il tamerice, il pitosporo, il cisto, il tarassaco, la lupinella, il timo, la facelia", "t": "Nel mese di maggio c’è una delle fioriture più importanti ossia quella dell’acacia. Oltre alle condizioni di bel tempo per avere una fioritura importante e ricca di nettare è necessario che il fiore maturi. Tale maturazione avviene in condizioni ideali con temperature medie intorno ai 10° C. E’ il periodo ideale per la sostituzione di eventuali telaini da nido deteriorati, smielare l’acacia per poi continuare con il grande raccolto, aggiungere i melari, controllare gli sciami ed eventualmente sostituire le regine più anziane."}, {"f": "l’eucalipto, l’acacia, il castagno, il timo, i trifogli, la veccia, la lupinella, la galega, il rovo, la salvia, la lavanda, l’ippocastano, la facelia", "t": "Continua la bottinatura in pianura e in collina. Si sorvegliano i melari, e se ne aggiungono dove serve. Si smiela tutto il miele opercolato, il millefiori di primavera è il migliore! Ci si può preparare a raccogliere il castagno."}, {"f": "il meliloto, la medica, la veccia, i trifogli, il castagno, il tiglio, il rovo, la lavanda, il girasole, la galega, la facelia", "t": "Il caldo estivo mette alla prova le famiglie di api, che hanno bisogno di molta acqua per regolare la temperatura del nido. L’apicoltore fa attenzione a posizionare i propri alveari in zone ombreggiate e a mettere a disposizione delle api un abbeveratoio nelle vicinanze, onde evitare spiacevoli incidenti con i vicini che potrebbero allarmarsi della presenza di api nei sottovasi o nelle piscine. In alcune zone sono in corso gli ultimi raccolti di castagno, eucalipto, millefiori e melata, ma è ancora lontana la possibilità di concedersi un po’ di riposo: è questo, infatti, il momento in cui si pongono le basi per il lavoro dell’anno successivo, tenendo a bada i nemici dell’alveare, accompagnando la crescita delle nuove colonie, verificando il buon vigore delle regine e andando a sostituire quelle più vecchie o esaurite."}, {"f": "il brugo, il girasole, il lamio, il ginestrino, la medica, il meliloto, il mirto, la santoreggia", "t": "In questo periodo l’apicoltore può iniziare a lavorare per preparare le famiglie ad un buon invernamento, è consigliabile verificare accuratamente il nido, iniziando a controllare la consistenza delle scorte, della covata e la salute della colonia in generale, intervenendo se necessario sulle famiglie più deboli."}, {"f": "il brugo, l’edera, l’inula, il lamio, il girasole, la medica, il trifoglio bianco e violetto", "t": "L’approssimarsi dell’autunno nelle zone più fresche costringe le famiglie a prepararsi all’inverno, riducendo le covate e immagazzinando le scorte il più vicino possibile al nido. Vengono tolti i melari e, una volta estratto l’ultimo miele, immagazzinati per la stagione successiva. Nelle zone più calde, invece, le fioriture autunnali danno un’ulteriore spinta alla crescita degli alveari dopo il rallentamento estivo, con possibili raccolti di miele su eucalipto ed edera."}, {"f": "il brugo, l’edera, il rosmarino e alcune crucifere", "t": "Il mese di Ottobre è al pari dei mesi primaverili un mese molto importante per l'apicoltore ed è il periodo in cui si concentrano i lavori per portare avanti un buon invernamento. Le attività ed i controlli da portare avanti sono molti. Le giornate sono ormai brevi e nelle poche ore di luce le colonie si apprestano a raccogliere l'ultimo l'eventuale nettare e polline a disposizione per nutrire l'ultima covata pre-invernale, che andrà a formare la colonia di api per l'inverno. Il lavoro necessario per un buon invernamento deve essere fatto scrupolosamente fin dalle prime visite di Ottobre e correre ai ripari in caso di problemi. L'apicoltore deve verificare la presenza della regina, la consistenza e la forza della famiglia. Si controllano attentamente le scorte procedendo ove necessario ad una nutrizione di supporto appropriata che dovrà anche aiutare le api a superare l'inverno."}, {"f": "il brugo, il corbezzolo, il rosmarino e la facelia di seconda semina", "t": "Le giornate si accorciano e le regine, quasi ovunque, interrompono la deposizione. Il fermento dei mesi più caldi è sostituito dallo sforzo di mantenersi al caldo: le api si stringono le une alle altre per produrre il calore necessario alla loro sopravvivenza consumando il miele immagazzinato e facendo vibrare i muscoli del torace. Famiglie ben popolate e con scorte sufficienti non temono i rigori dell’inverno, ma se anche una sola delle due condizioni venisse a mancare potrebbero essere guai seri! L’apicoltore passa in rassegna gli apiari per controllare che siano in ordine e sufficientemente al riparo dalle intemperie: ad esempio in posti particolarmente ventosi vengono messi dei pesi sui tetti delle arnie per scongiurarne lo scoperchiamento."}, {"f": "il corbezzolo", "t": "Il mese di Dicembre è l'ultimo mese dell'anno, il primo mese dell'inverno, dove le nostre colonie inizieranno a sentire i primi freddi che si protrarranno anche nel mese di Gennaio. In questo mese, le attività in apiario sono ridotte al minimo. Le nostre colonie se ben invernate sono al caldo nel glomere ed è bene non provocare rumori nelle vicinanza dell'arnia o arrecare disturbi. Non potendo svolgere attività in apiario, il buon apicoltore approfitta del tempo a disposizione per sistemare le arnie ed i melari in magazzino, pulizia e pittura con vernici apposite, preparando i telaini per il prossimo anno ed anche per aggiornarsi, leggendo libri/riviste di settore, approfondendo argomenti o tecniche di interesse e confrontarsi con altri apicoltori. Dopodiché si concede finalmente il meritato riposo dalle fatiche fisiche, ma con la mente già tesa a programmare la nuova annata, con l’incrollabile ottimismo che questa passione suscita."}];
+var NOMI_MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+var RACCOLTO = [4,5,6,7]; /* maggio-agosto */
+
+/* Galleria: 30 foto dell'apiario (file in img/galleria/NN.webp e NN-t.webp) */
+var FOTO = [
+  ['Grappoli di fiori di acacia',1200,1599],['Sciame appeso a un ramo',889,1600],['Le arnie tra i peschi in fiore',1599,899],['Miele appena smielato controluce',1024,768],
+  ['Recupero di uno sciame su un albero',972,1296],['Vasetti di miele pronti',1599,1200],['Un\'ape sul dito',899,1599],['Api all\'ingresso dell\'arnia',899,1599],
+  ['Gabriele al lavoro in apiario',1200,1600],['Uno sciame a forma di cuore',480,640],['Api sul favo',1200,1600],['Sciame su un ulivo',768,1024],
+  ['L\'apiario in primavera',1599,899],['Polline appena raccolto',899,1599],['Vasetti in fila',1598,635],['Gabriele e uno sciame',900,1600],
+  ['Sciame sul ramo',899,1599],['La disopercolatura del favo',691,1024],['Telaini pieni di api',712,1024],['Api e covata',768,1024],
+  ['Arnie nuove nel prato',1599,899],['Api in una cavità',899,1599],['Il magazzino delle arnie',1053,713],['Gabriele tra le arnie',900,1600],
+  ['Favo naturale nel telaino',1599,1200],['Girasole in piena fioritura',1200,1599],['Arnie sui bancali',1599,1200],['Le arnie sotto la neve',1599,1200],
+  ['L\'apiario innevato',860,315],['Neve tra gli ulivi',1599,1200]
+];
+var VIDEO = [
+  ['ydMRgAstE_E','La Natura'],['TfNAgNxBIOY','Al lavoro'],['3yiu6adniyg','La sciamatura'],['RELOIuX162k','L\'ape ed il girasole'],
+  ['Rw4Z1Zilggw','L\'estrazione del miele'],['0mjL4ZOUi2Q','Produzione miele naturale'],['BB0kl_pDYPM','Al lavoro in apiario'],['pnLIfXnALLM','Apicoltura Di.Di. P di Di Giuseppe Gabriele'],
+  ['iNhP6hB1HsQ','L\'ape al lavoro'],['X4kVhAnKAPQ','Raccolta sciame'],['19xg_vPOVCo','Piccoli interventi'],['oJlf9yP6XsI','Nuova stagione, nuove arnie, nuovo miele']
+];
+
 (function(){
   var root = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function el(tag, attrs, html){ var e = document.createElement(tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (html) e.innerHTML = html; return e; }
 
   /* ---------- foto mancanti: resta il favo disegnato ---------- */
-  document.querySelectorAll('.ph img').forEach(function(img){
-    function hide(){ img.style.visibility = 'hidden'; }
-    if (img.complete && img.currentSrc && img.naturalWidth === 0 && img.loading !== 'lazy') hide();
-    img.addEventListener('error', hide);
-  });
+  function guard(img){ img.addEventListener('error', function(){ img.style.visibility = 'hidden'; }); }
+  document.querySelectorAll('.ph img').forEach(guard);
 
   /* ---------- tema ---------- */
   document.getElementById('theme-btn').addEventListener('click', function(){
@@ -796,6 +1029,93 @@ var WA_NUM = '393420000730';
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
 
+  /* ---------- foto dell'hero in dissolvenza ---------- */
+  var slides = document.querySelectorAll('#hero-slide img'), si = 0;
+  if (!reduce && slides.length > 1) setInterval(function(){
+    slides[si].classList.remove('on'); si = (si + 1) % slides.length; slides[si].classList.add('on');
+  }, 5000);
+
+  /* ---------- calendario dell'apicoltore ---------- */
+  var tabs = document.getElementById('mesi-tabs'), oggi = new Date().getMonth();
+  function mostraMese(i, focus){
+    var m = MESI[i];
+    tabs.querySelectorAll('button').forEach(function(b, k){ b.setAttribute('aria-selected', String(k === i)); b.tabIndex = k === i ? 0 : -1; if (focus && k === i) b.focus(); });
+    document.getElementById('mese-nome').textContent = NOMI_MESI[i];
+    document.getElementById('mese-eyebrow').textContent = i === oggi ? 'Mese in corso' : (RACCOLTO.indexOf(i) > -1 ? 'Mese di raccolto' : 'Il lavoro del mese');
+    var img = document.getElementById('mese-img');
+    img.style.visibility = ''; img.src = 'img/mesi/' + NOMI_MESI[i].toLowerCase() + '.webp'; img.alt = 'Apiario e natura a ' + NOMI_MESI[i].toLowerCase();
+    var f = document.getElementById('mese-fiori'); f.innerHTML = '';
+    m.f.split(/,\s*|\s+e\s+(?=(?:il|la|lo|l’|i|le|gli|alcune)\b)/).forEach(function(x){ x = x.trim(); if (x) f.appendChild(el('span', {}, x)); });
+    document.getElementById('mese-testo').textContent = m.t;
+  }
+  NOMI_MESI.forEach(function(n, i){
+    var b = el('button', { type:'button', role:'tab', 'aria-controls':'mese', 'aria-label':n }, n.slice(0,3));
+    if (RACCOLTO.indexOf(i) > -1) b.classList.add('raccolto');
+    b.addEventListener('click', function(){ mostraMese(i); });
+    tabs.appendChild(b);
+  });
+  tabs.addEventListener('keydown', function(e){
+    var cur = Array.prototype.findIndex.call(tabs.children, function(b){ return b.getAttribute('aria-selected') === 'true'; });
+    if (e.key === 'ArrowRight') { e.preventDefault(); mostraMese((cur + 1) % 12, true); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); mostraMese((cur + 11) % 12, true); }
+  });
+  guard(document.getElementById('mese-img'));
+  mostraMese(oggi);
+
+  /* ---------- galleria con visore ---------- */
+  var gal = document.getElementById('gal'), more = document.getElementById('gal-more'), PRIME = 12;
+  FOTO.forEach(function(f, i){
+    var n = (i < 9 ? '0' : '') + (i + 1);
+    var b = el('button', { type:'button', 'aria-label':'Ingrandisci: ' + f[0] });
+    if (i >= PRIME) b.hidden = true;
+    var img = el('img', { src:'img/galleria/' + n + '-t.webp', alt:f[0], loading:'lazy', width:f[1], height:f[2] });
+    guard(img); b.appendChild(img);
+    b.addEventListener('click', function(){ apri(i); });
+    gal.appendChild(b);
+  });
+  more.addEventListener('click', function(){ gal.querySelectorAll('button[hidden]').forEach(function(b){ b.hidden = false; }); more.parentNode.hidden = true; });
+
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbCount = document.getElementById('lb-count'), cur = 0, last = null;
+  function vai(i){
+    cur = (i + FOTO.length) % FOTO.length;
+    var n = (cur < 9 ? '0' : '') + (cur + 1);
+    lbImg.src = 'img/galleria/' + n + '.webp'; lbImg.alt = FOTO[cur][0];
+    lbCount.textContent = FOTO[cur][0] + '  ·  ' + (cur + 1) + ' / ' + FOTO.length;
+  }
+  function apri(i){ last = document.activeElement; vai(i); lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.lb-close').focus(); }
+  function chiudi(){ lb.hidden = true; document.body.style.overflow = ''; if (last) last.focus(); }
+  lb.querySelector('.lb-prev').addEventListener('click', function(){ vai(cur - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function(){ vai(cur + 1); });
+  lb.querySelector('.lb-close').addEventListener('click', chiudi);
+  lb.addEventListener('click', function(e){ if (e.target === lb || e.target.classList.contains('lb-stage')) chiudi(); });
+  document.addEventListener('keydown', function(e){
+    if (lb.hidden) return;
+    if (e.key === 'Escape') chiudi();
+    if (e.key === 'ArrowRight') vai(cur + 1);
+    if (e.key === 'ArrowLeft') vai(cur - 1);
+  });
+  var x0 = null;
+  lb.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, { passive:true });
+  lb.addEventListener('touchend', function(e){ if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) vai(cur + (dx < 0 ? 1 : -1)); x0 = null; });
+
+  /* ---------- video: YouTube si carica solo al clic ---------- */
+  var vbox = document.getElementById('video');
+  VIDEO.forEach(function(v){
+    var wrap = el('article', { class:'vid' });
+    var fr = el('div', { class:'vid-frame' });
+    var b = el('button', { type:'button', 'aria-label':'Guarda il video: ' + v[1] });
+    var th = el('img', { src:'https://i.ytimg.com/vi/' + v[0] + '/hqdefault.jpg', alt:'', loading:'lazy', width:480, height:360 });
+    th.addEventListener('error', function(){ th.style.visibility = 'hidden'; });
+    b.appendChild(th);
+    b.appendChild(el('span', { class:'play' }, '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>'));
+    b.addEventListener('click', function(){
+      var ifr = el('iframe', { src:'https://www.youtube-nocookie.com/embed/' + v[0] + '?autoplay=1&rel=0', title:v[1], allow:'autoplay; encrypted-media; picture-in-picture; fullscreen', allowfullscreen:'' });
+      fr.innerHTML = ''; fr.appendChild(ifr);
+    });
+    fr.appendChild(b); wrap.appendChild(fr); wrap.appendChild(el('p', {}, v[1]));
+    vbox.appendChild(wrap);
+  });
+
   /* ---------- scelta pacchetto: preseleziona il modulo ---------- */
   var sel = document.getElementById('a-pacchetto');
   document.querySelectorAll('[data-pacchetto]').forEach(function(b){
@@ -822,7 +1142,7 @@ var WA_NUM = '393420000730';
       if (!form.checkValidity()) { msg.textContent = 'Compila i campi obbligatori e accetta l\'informativa privacy.'; return; }
       if (form.querySelector('.hp').checked) return;
       var url = waUrl(form);
-      var w = window.open(url, '_blank', 'noopener');
+      window.open(url, '_blank', 'noopener');
       msg.innerHTML = 'Si apre WhatsApp con il messaggio già scritto: premi <b>Invia</b> per mandarlo a Gabriele. Se non si apre, <a href="' + url + '" target="_blank" rel="noopener">tocca qui</a>.';
     });
   });
