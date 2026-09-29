@@ -447,3 +447,7 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 }
 /* sul telefono i due contenitori non fanno nulla */
 @media (max-width:640px){.banda .riquadro-video,.banda .cornice-video{position:static}.banda .cornice-video::after{display:none}}
+
+/* bomboniere: l'immagine è quadrata con fondo crema, niente bande bianche */
+.servizio>.stampa img{background:#FAF1E2}
+@media (max-width:640px){.servizio>.stampa img{aspect-ratio:1}}
