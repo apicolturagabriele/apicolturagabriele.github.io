@@ -103,14 +103,30 @@ var WA_NUM = '393420000730';
     vis.addEventListener('click', function(e){ if (e.target === vis || e.target.classList.contains('scena')) chiudi(); });
     document.addEventListener('keydown', function(e){
       if (vis.hidden) return;
+      if (vis.classList.contains('singola') && e.key !== 'Escape') return;
       if (e.key === 'Escape') chiudi();
       if (e.key === 'ArrowRight') vai(cur + 1);
       if (e.key === 'ArrowLeft') vai(cur - 1);
     });
     var x0 = null;
     vis.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, { passive:true });
-    vis.addEventListener('touchend', function(e){ if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) vai(cur + (dx < 0 ? 1 : -1)); x0 = null; });
+    vis.addEventListener('touchend', function(e){ if (x0 === null || vis.classList.contains('singola')) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) vai(cur + (dx < 0 ? 1 : -1)); x0 = null; });
   }
+
+  /* ---------- immagini singole da ingrandire (es. la pergamena) ---------- */
+  var visS = document.getElementById('visore');
+  document.querySelectorAll('.ingrandisci').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (!visS) return;
+      var ultimo = document.activeElement, img = visS.querySelector('img');
+      img.src = b.dataset.grande; img.alt = b.dataset.didascalia || '';
+      visS.querySelector('.didascalia').textContent = b.dataset.didascalia || '';
+      visS.classList.add('singola'); visS.hidden = false; document.body.style.overflow = 'hidden';
+      visS.querySelector('.chiudi').focus();
+      var osserva = new MutationObserver(function(){ if (visS.hidden) { visS.classList.remove('singola'); osserva.disconnect(); if (ultimo) ultimo.focus(); } });
+      osserva.observe(visS, { attributes:true, attributeFilter:['hidden'] });
+    });
+  });
 
   /* ---------- video: YouTube si carica solo al clic ---------- */
   var vbox = document.getElementById('elenco-video');

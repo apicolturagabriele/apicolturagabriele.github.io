@@ -403,3 +403,13 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 #calendario,#servizi,#video,#pacchetti{padding-top:0!important}
 .titolo+.testo{margin-top:0}
 @media (min-width:1081px){.marca{flex:none}}
+
+/* pergamena ingrandibile */
+.pergamena .ingrandisci{all:unset;display:block;position:relative;cursor:zoom-in;width:100%}
+.pergamena .ingrandisci:focus-visible{outline:3px solid var(--miele-vivo);outline-offset:4px;border-radius:var(--r)}
+.pergamena .stampa img{aspect-ratio:auto;transition:transform .3s}
+.pergamena .ingrandisci:hover img{transform:scale(1.01)}
+.pergamena .stampa figcaption{font-style:normal;font-weight:600;color:var(--miele)}
+.pergamena .lente{position:absolute;right:12px;top:12px;width:42px;height:42px;border-radius:50%;background:var(--inchiostro);color:var(--carta);display:grid;place-items:center;box-shadow:var(--ombra)}
+.pergamena .lente svg{width:20px;height:20px}
+.visore.singola .prima,.visore.singola .dopo{visibility:hidden}
