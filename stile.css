@@ -403,3 +403,10 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 #calendario,#servizi,#video,#pacchetti{padding-top:0!important}
 .titolo+.testo{margin-top:0}
 @media (min-width:1081px){.marca{flex:none}}
+
+/* ---------- scotch sulle foto principali ---------- */
+:root{--scotch:rgba(236,214,150,.62);--scotch-bordo:rgba(180,150,80,.18)}
+:root[data-theme="dark"]{--scotch:rgba(236,214,150,.32);--scotch-bordo:rgba(0,0,0,.2)}
+.stampa.nastro{position:relative;padding-top:6px}
+.stampa.nastro::before{content:"";position:absolute;z-index:2;top:-8px;left:50%;width:min(120px,34%);height:28px;transform:translateX(-50%) rotate(-3deg);background:var(--scotch);border-left:1px dashed var(--scotch-bordo);border-right:1px dashed var(--scotch-bordo);box-shadow:0 1px 3px rgba(46,39,32,.12);-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px);pointer-events:none}
+.stampa.nastro-dx::before{left:auto;right:-10px;transform:rotate(28deg);width:min(96px,40%)}
