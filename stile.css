@@ -428,4 +428,4 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 .banda-testo{position:relative;z-index:1;width:100%;padding-block:clamp(22px,4vw,44px);display:flex;flex-direction:column;gap:6px;color:#FBF3E2}
 .banda-testo .etichetta{color:#F1C465}
 .banda-frase{font:500 clamp(1.5rem,3.4vw,2.5rem)/1.15 var(--f-titoli);max-width:22ch;text-wrap:balance}
-@media (prefers-reduced-motion:reduce){.banda video{display:none}.banda{background:url(video/apiario-girasoli-poster.webp) center/cover}}
+@media (prefers-reduced-motion:reduce){.banda video{display:none}.banda{background:url(video/dalle-arnie-al-vasetto-poster.webp) center/cover}}
