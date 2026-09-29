@@ -413,3 +413,10 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 .pergamena .lente{position:absolute;right:12px;top:12px;width:42px;height:42px;border-radius:50%;background:var(--inchiostro);color:var(--carta);display:grid;place-items:center;box-shadow:var(--ombra)}
 .pergamena .lente svg{width:20px;height:20px}
 .visore.singola .prima,.visore.singola .dopo{visibility:hidden}
+
+/* articolo di giornale: si apre nel visore e si scorre */
+.link-articolo{all:unset;cursor:pointer;color:var(--inchiostro);text-decoration:underline;text-decoration-color:var(--miele-vivo);text-decoration-thickness:1.5px;text-underline-offset:3px;font-weight:600}
+.link-articolo:hover{color:var(--miele)}
+.link-articolo:focus-visible{outline:3px solid var(--miele-vivo);outline-offset:3px;border-radius:4px}
+.visore.lungo .scena{align-items:flex-start;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
+.visore.lungo .scena img{max-height:none;width:min(720px,100%);height:auto}
