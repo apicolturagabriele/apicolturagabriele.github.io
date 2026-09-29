@@ -1,17 +1,16 @@
 /* ==========================================================================
    Apicoltura Di Giuseppe Gabriele
-   Stile classico e caldo: carta chiara, titoli Cormorant Garamond,
-   testi Source Sans, foto con angoli smussati.
+   Carta chiara, titoli a macchina da scrivere (Courier Prime),
+   testi in Lora, foto con angoli smussati.
    ========================================================================== */
 
 /* font ospitati sul sito */
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2")}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/source-sans-3-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Source Sans 3";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/source-sans-3-latin-400-italic.woff2) format("woff2")}
-@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/source-sans-3-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/source-sans-3-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Courier Prime";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/courier-prime-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Courier Prime";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/courier-prime-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/lora-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Lora";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/lora-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Lora";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/lora-latin-700-normal.woff2) format("woff2")}
 
 /* ---------- colori: giorno ---------- */
 :root{
@@ -27,8 +26,8 @@
   --erba:#5A7436;
   --ombra:0 2px 4px rgba(46,39,32,.06), 0 12px 28px -14px rgba(46,39,32,.28);
   --r:12px;
-  --f-titoli:"Cormorant Garamond",Garamond,Georgia,"Times New Roman",serif;
-  --f-testo:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-titoli:"Courier Prime","Courier New",Courier,monospace;
+  --f-testo:"Lora",Georgia,"Times New Roman",serif;
   --largo:1120px;
   --colonna:680px;
 }
@@ -44,22 +43,22 @@
 /* ---------- base ---------- */
 *,*::before,*::after{box-sizing:border-box}
 html{overflow-x:hidden;-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:20px}
-body{margin:0;background:var(--carta);color:var(--inchiostro);font:400 18px/1.65 var(--f-testo);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--carta);color:var(--inchiostro);font:400 17px/1.7 var(--f-testo);-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration-color:var(--miele-vivo);text-decoration-thickness:1.5px;text-underline-offset:3px}
 a:hover{color:var(--miele)}
 [hidden]{display:none!important}
 p{margin:0}
-h1,h2,h3,h4{font-family:var(--f-titoli);font-weight:600;line-height:1.1;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:500;letter-spacing:-.01em}
-h2{font-size:clamp(2rem,3.8vw,2.9rem);font-weight:500}
-h3{font-size:1.5rem}
+h1,h2,h3,h4{font-family:var(--f-titoli);font-weight:700;line-height:1.15;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(1.9rem,4.4vw,3.1rem);font-weight:700;text-transform:uppercase}
+h2{font-size:clamp(1.5rem,2.9vw,2.1rem);font-weight:700;text-transform:uppercase}
+h3{font-size:1.2rem}
 :focus-visible{outline:3px solid var(--miele-vivo);outline-offset:3px;border-radius:4px}
 .salta{position:absolute;left:-9999px;top:8px;background:var(--inchiostro);color:var(--carta);padding:10px 14px;z-index:100}
 .salta:focus{left:12px}
 .macchina{font-family:var(--f-titoli)}
 /* note brevi: corsivo del titolo, colore miele */
-.mano{font-family:var(--f-titoli);font-style:italic;font-weight:500;font-size:1.3rem;line-height:1.3;color:var(--matita)}
+.mano{font-family:var(--f-testo);font-style:italic;font-weight:400;font-size:1.1rem;line-height:1.3;color:var(--matita)}
 .mano.miele{color:var(--miele)}
 .mano.erba{color:var(--erba)}
 .etichetta{font:600 .78rem/1.3 var(--f-testo);letter-spacing:.14em;text-transform:uppercase;color:var(--miele)}
@@ -79,7 +78,7 @@ main>section.alt{background:var(--carta-2)}
 .marca{display:flex;align-items:center;gap:14px;text-decoration:none}
 .marca:hover{color:inherit}
 .marca img{width:48px;height:48px;border-radius:50%}
-.marca b{display:block;font:600 1.35rem/1.1 var(--f-titoli)}
+.marca b{display:block;font:700 1.02rem/1.2 var(--f-titoli);text-transform:uppercase;letter-spacing:.03em}
 .marca small{display:block;font-size:.8rem;color:var(--matita);margin-top:2px}
 .strumenti{display:flex;align-items:center;gap:8px}
 .tasto-icona{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--riga);background:var(--bianco);color:var(--inchiostro);border-radius:50%;cursor:pointer}
@@ -97,7 +96,7 @@ main>section.alt{background:var(--carta-2)}
 .linguette .adotta a{background:var(--inchiostro);color:var(--carta);padding:9px 18px;border-radius:999px;border:0}
 .linguette .adotta a:hover{background:var(--miele);color:#fff}
 .linguette .adotta a[aria-current="page"]{background:var(--miele);color:#fff}
-@media (max-width:1080px){
+@media (max-width:1240px){
   .testata .riga-marca{flex-wrap:wrap}
   .tasto-menu{display:grid}
   .linguette{display:none;order:3;width:100%;margin:0}
@@ -158,14 +157,14 @@ main>section.alt{background:var(--carta-2)}
 .appunti{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .appunti div{background:var(--bianco);border-radius:var(--r);padding:22px 24px}
 
-.appunti b{display:block;font:600 1.35rem/1.2 var(--f-titoli);margin-bottom:8px}
+.appunti b{display:block;font:700 1.05rem/1.25 var(--f-titoli);margin-bottom:8px}
 .appunti p{color:var(--matita);font-size:1rem}
 @media (max-width:760px){.appunti{grid-template-columns:1fr}}
 
 .righe{background:var(--bianco);border-radius:var(--r);padding:clamp(20px,3vw,32px)}
 
 /* citazione */
-.citazione{font-family:var(--f-titoli);font-style:italic;font-weight:500;font-size:clamp(1.6rem,2.8vw,2.1rem);line-height:1.3;color:var(--inchiostro);max-width:32ch;border-left:3px solid var(--miele-vivo);padding-left:22px;margin:0}
+.citazione{font-family:var(--f-testo);font-style:italic;font-weight:400;font-size:clamp(1.3rem,2.2vw,1.65rem);line-height:1.3;color:var(--inchiostro);max-width:32ch;border-left:3px solid var(--miele-vivo);padding-left:22px;margin:0}
 .citazione cite{display:block;font:600 .78rem/1 var(--f-testo);letter-spacing:.14em;text-transform:uppercase;color:var(--matita);margin-top:14px;font-style:normal}
 
 /* due colonne */
@@ -289,13 +288,13 @@ main>section.alt{background:var(--carta-2)}
 .recensioni{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,40px);align-items:stretch}
 .voto{background:var(--inchiostro);color:var(--carta);border-radius:var(--r);padding:26px 28px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:220px}
 .voto .etichetta{color:var(--miele-vivo)}
-.voto b{font:500 4rem/1 var(--f-titoli)}
+.voto b{font:700 3.4rem/1 var(--f-titoli)}
 .stelle{color:var(--miele-vivo);letter-spacing:2px}
 .voto .tasto{margin-top:auto;border-color:var(--carta);color:var(--carta)}
 .voto .tasto:hover{background:var(--carta);color:var(--inchiostro)}
 .pareri{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .parere{background:var(--bianco);border-radius:var(--r);padding:24px 26px;display:flex;flex-direction:column;gap:12px}
-.parere blockquote{margin:0;font-family:var(--f-titoli);font-style:italic;font-size:1.45rem;line-height:1.3}
+.parere blockquote{margin:0;font-family:var(--f-testo);font-style:italic;font-size:1.15rem;line-height:1.3}
 .parere footer{font-size:.88rem;color:var(--matita);margin-top:auto}
 @media (max-width:760px){.recensioni,.pareri{grid-template-columns:1fr}}
 
@@ -310,7 +309,7 @@ main>section.alt{background:var(--carta-2)}
 .pacchetto{position:relative;background:var(--bianco);border-radius:var(--r);display:flex;flex-direction:column;box-shadow:var(--ombra);border:2px solid transparent}
 .pacchetto.top{border-color:var(--miele-vivo)}
 .pacchetto .cima{padding:24px 24px 16px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--riga)}
-.pacchetto .prezzo{font:500 2.4rem/1 var(--f-titoli);color:var(--miele)}
+.pacchetto .prezzo{font:700 2rem/1 var(--f-titoli);color:var(--miele)}
 .pacchetto .prezzo small{font:400 .9rem var(--f-testo);color:var(--matita)}
 .pacchetto ul{margin:0;padding:18px 24px;list-style:none;display:flex;flex-direction:column;gap:10px;flex:1}
 .pacchetto li{padding-left:24px;position:relative;font-size:.98rem}
@@ -321,13 +320,13 @@ main>section.alt{background:var(--carta-2)}
 .certificato{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-top:clamp(40px,5vw,64px)}
 .certificato h3.macchina{text-transform:none!important;font-size:1.8rem}
 .attestato{background:var(--bianco);border:1px solid var(--miele-vivo);outline:1px solid var(--miele-vivo);outline-offset:-9px;border-radius:6px;padding:40px 30px 32px;text-align:center;display:flex;flex-direction:column;gap:10px;box-shadow:var(--ombra)}
-.attestato b{font:italic 500 2.6rem/1.1 var(--f-titoli)}
+.attestato b{font:italic 400 2.2rem/1.1 var(--f-testo)}
 .attestato .piede{display:flex;justify-content:space-between;gap:10px;margin-top:14px;font-size:.8rem;color:var(--matita)}
 @media (max-width:820px){.certificato{grid-template-columns:1fr}}
 
 /* ---------- moduli ---------- */
 .modulo{background:var(--bianco);border-radius:var(--r);padding:clamp(22px,3vw,32px);box-shadow:var(--ombra)}
-.modulo .intest{font:600 1.5rem/1.1 var(--f-titoli);margin-bottom:20px}
+.modulo .intest{font:700 1.15rem/1.2 var(--f-titoli);text-transform:uppercase;letter-spacing:.04em;margin-bottom:20px}
 .modulo .intest span{display:none}
 .campi{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
 .campi .tutto{grid-column:1/-1}
@@ -359,7 +358,7 @@ main>section.alt{background:var(--carta-2)}
 .chiusura{background:var(--inchiostro);color:var(--carta);padding-block:44px 32px}
 .chiusura .foglio{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;align-items:flex-start}
 .chiusura p{font-size:.92rem;line-height:1.7;opacity:.85}
-.chiusura p strong{font:600 1.25rem/1.4 var(--f-titoli);opacity:1}
+.chiusura p strong{font:700 1rem/1.4 var(--f-titoli);opacity:1}
 .chiusura nav{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.92rem;max-width:520px}
 .chiusura nav a{text-decoration:none;opacity:.8}
 .chiusura nav a:hover{opacity:1;color:var(--miele-vivo)}
@@ -374,7 +373,7 @@ main>section.alt{background:var(--carta-2)}
 .linguette .adotta{order:9}
 .marca{min-width:0;flex:1 1 auto}
 .marca span{min-width:0}
-@media (max-width:1080px){.testata .riga-marca{flex-wrap:wrap}.strumenti{flex:none}}
+@media (max-width:1240px){.testata .riga-marca{flex-wrap:wrap}.strumenti{flex:none}}
 @media (max-width:520px){.marca img{width:40px;height:40px}.marca small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .marca{flex:1 1 0}
 @media (max-width:520px){.marca b{font-size:1.05rem}}
@@ -402,4 +401,13 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 /* pagina unica: le sezioni di approfondimento restano legate a quella che le precede */
 #calendario,#servizi,#video,#pacchetti{padding-top:0!important}
 .titolo+.testo{margin-top:0}
-@media (min-width:1081px){.marca{flex:none}}
+@media (min-width:1241px){.marca{flex:none}}
+
+/* menu, pulsanti ed etichette a macchina da scrivere */
+.linguette a{font-family:var(--f-titoli);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.tasto{font:700 .8rem/1 var(--f-titoli);letter-spacing:.1em;text-transform:uppercase}
+.etichetta{font-family:var(--f-titoli);font-weight:700}
+.ricette li::before,.passi li::before{font-family:var(--f-titoli);font-weight:700}
+.mese summary h3{font-size:1.1rem;text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:1240px){.linguette a{font-size:.95rem}}
+@media (min-width:1241px){.linguette ul{flex-wrap:nowrap;gap:4px 20px}.linguette a{font-size:.76rem;white-space:nowrap}.marca b{font-size:.95rem}}
