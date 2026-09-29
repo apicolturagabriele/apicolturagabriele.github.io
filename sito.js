@@ -136,7 +136,7 @@ var WA_NUM = '393420000730';
 
   /* ---------- video: YouTube si carica solo al clic ---------- */
   var vbox = document.getElementById('elenco-video');
-  if (vbox && window.VIDEO) VIDEO.forEach(function(v){
+  if (vbox && window.VIDEO) VIDEO.forEach(function(v, i){
     var wrap = el('article', { class:'clip' });
     var fr = el('div', { class:'cornice' });
     var b = el('button', { type:'button', 'aria-label':'Guarda il video: ' + v[1] });
@@ -149,8 +149,11 @@ var WA_NUM = '393420000730';
       fr.innerHTML = ''; fr.appendChild(ifr);
     });
     fr.appendChild(b); wrap.appendChild(fr); wrap.appendChild(el('p', {}, v[1]));
+    if (i >= 4) wrap.hidden = true;
     vbox.appendChild(wrap);
   });
+  var altriV = document.getElementById('altri-video');
+  if (altriV && vbox) altriV.addEventListener('click', function(){ vbox.querySelectorAll('.clip[hidden]').forEach(function(c){ c.hidden = false; }); altriV.parentNode.hidden = true; });
 
   /* ---------- scelta pacchetto: preseleziona il modulo ---------- */
   var sel = document.getElementById('a-pacchetto');
