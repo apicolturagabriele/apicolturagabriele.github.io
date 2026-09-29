@@ -63,6 +63,12 @@ var WA_NUM = '393420000730';
     }); });
   }
 
+  /* ---------- video in sottofondo: parte solo quando è in vista ---------- */
+  var bv = document.getElementById('banda-video');
+  if (bv && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(en){ en.forEach(function(e){ if (e.isIntersecting) { var pr = bv.play(); if (pr && pr.catch) pr.catch(function(){}); } else bv.pause(); }); }, { threshold: .1 }).observe(bv);
+  }
+
   /* ---------- calendario: apre il mese in corso ---------- */
   var mesi = document.querySelectorAll('.mese');
   if (mesi.length === 12) {
