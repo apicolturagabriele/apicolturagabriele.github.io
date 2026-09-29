@@ -15,10 +15,8 @@ var WA_NUM = '393420000730';
   var tb = document.getElementById('tasto-tema');
   if (tb) tb.addEventListener('click', function(){
     var cur = root.getAttribute('data-theme');
-    if (!cur) cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     var next = cur === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
-    try { localStorage.setItem('ag-theme', next); } catch(e){}
   });
 
   /* ---------- menu su telefono ---------- */
