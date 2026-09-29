@@ -434,3 +434,16 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
    diventa quasi quadrata così le riprese verticali riempiono tutto */
 .banda{min-height:clamp(320px,54vw,660px)}
 @media (max-width:640px){.banda{min-height:96vw}}
+
+/* sul computer il video sta in un riquadro largo come la pagina, intero, senza tagli */
+@media (min-width:641px){
+  .banda{background:var(--carta-2);min-height:0;display:block;padding-block:clamp(40px,6vw,72px)!important}
+  .banda::after{display:none}
+  .banda .riquadro-video{position:relative;max-width:var(--largo);margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+  .banda .cornice-video{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;box-shadow:var(--ombra);background:#3a2c14}
+  .banda video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .banda .cornice-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,20,8,0) 55%,rgba(30,20,8,.6))}
+  .banda-testo{position:absolute;left:0;right:0;bottom:0;padding:clamp(18px,3vw,32px) clamp(20px,3vw,36px);max-width:none;margin:0}
+}
+/* sul telefono i due contenitori non fanno nulla */
+@media (max-width:640px){.banda .riquadro-video,.banda .cornice-video{position:static}.banda .cornice-video::after{display:none}}
