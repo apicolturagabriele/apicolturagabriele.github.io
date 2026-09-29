@@ -429,3 +429,8 @@ html{scroll-padding-top:calc(var(--h-testata,76px) - 20px)}
 .banda-testo .etichetta{color:#F1C465}
 .banda-frase{font:500 clamp(1.5rem,3.4vw,2.5rem)/1.15 var(--f-titoli);max-width:22ch;text-wrap:balance}
 @media (prefers-reduced-motion:reduce){.banda video{display:none}.banda{background:url(video/dalle-arnie-al-vasetto-poster.webp) center/cover}}
+
+/* fascia video più alta: sul computer mostra più immagine, sul telefono
+   diventa quasi quadrata così le riprese verticali riempiono tutto */
+.banda{min-height:clamp(320px,54vw,660px)}
+@media (max-width:640px){.banda{min-height:96vw}}
