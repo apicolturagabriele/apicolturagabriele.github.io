@@ -365,6 +365,9 @@ main>section.alt{background:var(--carta-2)}
 .chiusura nav a:hover{opacity:1;color:var(--miele-vivo)}
 .chiusura .pagina{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:8px;padding-top:16px;border-top:1px solid rgba(247,241,228,.15);font-size:.82rem;opacity:.65}
 .chiusura .pagina a{color:inherit}
+.chiusura .credito{width:100%;margin-top:24px;font-size:11px;line-height:1.4;text-align:left;opacity:.55}
+.chiusura .credito a{color:inherit;text-decoration:none}
+.chiusura .credito a:hover{text-decoration:underline}
 :root[data-theme="dark"] .chiusura{background:#15120E;color:var(--inchiostro)}
 .wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px -6px rgba(0,0,0,.45)}
 .wa svg{width:27px;height:27px}
